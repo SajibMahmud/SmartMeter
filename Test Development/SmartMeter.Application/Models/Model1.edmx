@@ -1,0 +1,3015 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SmartMeterModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SmartMeterModelStoreContainer">
+          <EntitySet Name="Address" EntityType="SmartMeterModel.Store.Address" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AppUser" EntityType="SmartMeterModel.Store.AppUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Bill" EntityType="SmartMeterModel.Store.Bill" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BillingPeriod" EntityType="SmartMeterModel.Store.BillingPeriod" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BillingRate" EntityType="SmartMeterModel.Store.BillingRate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BillingRateConfig" EntityType="SmartMeterModel.Store.BillingRateConfig" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BillScheme" EntityType="SmartMeterModel.Store.BillScheme" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="City" EntityType="SmartMeterModel.Store.City" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Command" EntityType="SmartMeterModel.Store.Command" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CommandValue" EntityType="SmartMeterModel.Store.CommandValue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Company" EntityType="SmartMeterModel.Store.Company" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CompanyUser" EntityType="SmartMeterModel.Store.CompanyUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="SmartMeterModel.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Device" EntityType="SmartMeterModel.Store.Device" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeviceProperty" EntityType="SmartMeterModel.Store.DeviceProperty" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeviceType" EntityType="SmartMeterModel.Store.DeviceType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeviceTypeProperty" EntityType="SmartMeterModel.Store.DeviceTypeProperty" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LimitType" EntityType="SmartMeterModel.Store.LimitType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LoadScheme" EntityType="SmartMeterModel.Store.LoadScheme" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MeterProperty" EntityType="SmartMeterModel.Store.MeterProperty" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Permission" EntityType="SmartMeterModel.Store.Permission" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Role" EntityType="SmartMeterModel.Store.Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RolePermission" EntityType="SmartMeterModel.Store.RolePermission" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TimeScheme" EntityType="SmartMeterModel.Store.TimeScheme" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserLog" EntityType="SmartMeterModel.Store.UserLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserPermission" EntityType="SmartMeterModel.Store.UserPermission" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserProfile" EntityType="SmartMeterModel.Store.UserProfile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserRole" EntityType="SmartMeterModel.Store.UserRole" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Address__CityId__117F9D94" Association="SmartMeterModel.Store.FK__Address__CityId__117F9D94">
+            <End Role="City" EntitySet="City" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Address__Country__1273C1CD" Association="SmartMeterModel.Store.FK__Address__Country__1273C1CD">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Address__Cretaed__1367E606" Association="SmartMeterModel.Store.FK__Address__Cretaed__1367E606">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Address__Updated__145C0A3F" Association="SmartMeterModel.Store.FK__Address__Updated__145C0A3F">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__BillingPer__73BA3083" Association="SmartMeterModel.Store.FK__Bill__BillingPer__73BA3083">
+            <End Role="BillingPeriod" EntitySet="BillingPeriod" />
+            <End Role="Bill" EntitySet="Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__CreatedBy__71D1E811" Association="SmartMeterModel.Store.FK__Bill__CreatedBy__71D1E811">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Bill" EntitySet="Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__DeviceId__70DDC3D8" Association="SmartMeterModel.Store.FK__Bill__DeviceId__70DDC3D8">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="Bill" EntitySet="Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__UpdatedBy__72C60C4A" Association="SmartMeterModel.Store.FK__Bill__UpdatedBy__72C60C4A">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Bill" EntitySet="Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingPe__Compa__3B75D760" Association="SmartMeterModel.Store.FK__BillingPe__Compa__3B75D760">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="BillingPeriod" EntitySet="BillingPeriod" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingPe__Creat__3C69FB99" Association="SmartMeterModel.Store.FK__BillingPe__Creat__3C69FB99">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="BillingPeriod" EntitySet="BillingPeriod" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingPe__Updat__3D5E1FD2" Association="SmartMeterModel.Store.FK__BillingPe__Updat__3D5E1FD2">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="BillingPeriod" EntitySet="BillingPeriod" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Billi__7A672E12" Association="SmartMeterModel.Store.FK__BillingRa__Billi__7A672E12">
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfig" />
+            <End Role="BillingRate" EntitySet="BillingRate" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__BillS__440B1D61" Association="SmartMeterModel.Store.FK__BillingRa__BillS__440B1D61">
+            <End Role="BillScheme" EntitySet="BillScheme" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfig" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Creat__44FF419A" Association="SmartMeterModel.Store.FK__BillingRa__Creat__44FF419A">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfig" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Crete__7C4F7684" Association="SmartMeterModel.Store.FK__BillingRa__Crete__7C4F7684">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="BillingRate" EntitySet="BillingRate" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Limit__7B5B524B" Association="SmartMeterModel.Store.FK__BillingRa__Limit__7B5B524B">
+            <End Role="LimitType" EntitySet="LimitType" />
+            <End Role="BillingRate" EntitySet="BillingRate" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__LoadS__47DBAE45" Association="SmartMeterModel.Store.FK__BillingRa__LoadS__47DBAE45">
+            <End Role="LoadScheme" EntitySet="LoadScheme" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfig" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__TimeS__46E78A0C" Association="SmartMeterModel.Store.FK__BillingRa__TimeS__46E78A0C">
+            <End Role="TimeScheme" EntitySet="TimeScheme" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfig" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Updat__45F365D3" Association="SmartMeterModel.Store.FK__BillingRa__Updat__45F365D3">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfig" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Updat__7D439ABD" Association="SmartMeterModel.Store.FK__BillingRa__Updat__7D439ABD">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="BillingRate" EntitySet="BillingRate" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillSchem__Compa__239E4DCF" Association="SmartMeterModel.Store.FK__BillSchem__Compa__239E4DCF">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="BillScheme" EntitySet="BillScheme" />
+          </AssociationSet>
+          <AssociationSet Name="FK__City__CountryId__0AD2A005" Association="SmartMeterModel.Store.FK__City__CountryId__0AD2A005">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CommandVa__Comma__02FC7413" Association="SmartMeterModel.Store.FK__CommandVa__Comma__02FC7413">
+            <End Role="Command" EntitySet="Command" />
+            <End Role="CommandValue" EntitySet="CommandValue" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CommandVa__Devic__02084FDA" Association="SmartMeterModel.Store.FK__CommandVa__Devic__02084FDA">
+            <End Role="DeviceType" EntitySet="DeviceType" />
+            <End Role="CommandValue" EntitySet="CommandValue" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Company__Address__1B0907CE" Association="SmartMeterModel.Store.FK__Company__Address__1B0907CE">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Company__Created__1BFD2C07" Association="SmartMeterModel.Store.FK__Company__Created__1BFD2C07">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Company__Updated__1CF15040" Association="SmartMeterModel.Store.FK__Company__Updated__1CF15040">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CompanyUs__Compa__09A971A2" Association="SmartMeterModel.Store.FK__CompanyUs__Compa__09A971A2">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="CompanyUser" EntitySet="CompanyUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CompanyUs__Creat__0B91BA14" Association="SmartMeterModel.Store.FK__CompanyUs__Creat__0B91BA14">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="CompanyUser" EntitySet="CompanyUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CompanyUs__Updat__0C85DE4D" Association="SmartMeterModel.Store.FK__CompanyUs__Updat__0C85DE4D">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="CompanyUser" EntitySet="CompanyUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CompanyUs__UserI__0A9D95DB" Association="SmartMeterModel.Store.FK__CompanyUs__UserI__0A9D95DB">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="CompanyUser" EntitySet="CompanyUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__BillSche__571DF1D5" Association="SmartMeterModel.Store.FK__Device__BillSche__571DF1D5">
+            <End Role="BillScheme" EntitySet="BillScheme" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__CreatedB__5441852A" Association="SmartMeterModel.Store.FK__Device__CreatedB__5441852A">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__DeviceTy__52593CB8" Association="SmartMeterModel.Store.FK__Device__DeviceTy__52593CB8">
+            <End Role="DeviceType" EntitySet="DeviceType" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__ParentDe__5629CD9C" Association="SmartMeterModel.Store.FK__Device__ParentDe__5629CD9C">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="Device1" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__UpdatedB__5535A963" Association="SmartMeterModel.Store.FK__Device__UpdatedB__5535A963">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__UserId__534D60F1" Association="SmartMeterModel.Store.FK__Device__UserId__534D60F1">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DevicePro__Devic__1332DBDC" Association="SmartMeterModel.Store.FK__DevicePro__Devic__1332DBDC">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="DeviceProperty" EntitySet="DeviceProperty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeviceTyp__Devic__19DFD96B" Association="SmartMeterModel.Store.FK__DeviceTyp__Devic__19DFD96B">
+            <End Role="DeviceType" EntitySet="DeviceType" />
+            <End Role="DeviceTypeProperty" EntitySet="DeviceTypeProperty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LimitType__Creat__5DCAEF64" Association="SmartMeterModel.Store.FK__LimitType__Creat__5DCAEF64">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="LimitType" EntitySet="LimitType" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LimitType__Updat__5EBF139D" Association="SmartMeterModel.Store.FK__LimitType__Updat__5EBF139D">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="LimitType" EntitySet="LimitType" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LoadSchem__Compa__2E1BDC42" Association="SmartMeterModel.Store.FK__LoadSchem__Compa__2E1BDC42">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="LoadScheme" EntitySet="LoadScheme" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MeterProp__Creat__2180FB33" Association="SmartMeterModel.Store.FK__MeterProp__Creat__2180FB33">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="MeterProperty" EntitySet="MeterProperty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MeterProp__Devic__208CD6FA" Association="SmartMeterModel.Store.FK__MeterProp__Devic__208CD6FA">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="MeterProperty" EntitySet="MeterProperty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MeterProp__Updat__22751F6C" Association="SmartMeterModel.Store.FK__MeterProp__Updat__22751F6C">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="MeterProperty" EntitySet="MeterProperty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RolePermi__Permi__29221CFB" Association="SmartMeterModel.Store.FK__RolePermi__Permi__29221CFB">
+            <End Role="Permission" EntitySet="Permission" />
+            <End Role="RolePermission" EntitySet="RolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RolePermi__RoleI__2A164134" Association="SmartMeterModel.Store.FK__RolePermi__RoleI__2A164134">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="RolePermission" EntitySet="RolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TimeSchem__Compa__34C8D9D1" Association="SmartMeterModel.Store.FK__TimeSchem__Compa__34C8D9D1">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="TimeScheme" EntitySet="TimeScheme" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserLog__UserId__2EDAF651" Association="SmartMeterModel.Store.FK__UserLog__UserId__2EDAF651">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="UserLog" EntitySet="UserLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserPermi__AppUs__3493CFA7" Association="SmartMeterModel.Store.FK__UserPermi__AppUs__3493CFA7">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="UserPermission" EntitySet="UserPermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserPermi__Permi__339FAB6E" Association="SmartMeterModel.Store.FK__UserPermi__Permi__339FAB6E">
+            <End Role="Permission" EntitySet="Permission" />
+            <End Role="UserPermission" EntitySet="UserPermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserProfi__Addre__3C34F16F" Association="SmartMeterModel.Store.FK__UserProfi__Addre__3C34F16F">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserProfi__UserI__3B40CD36" Association="SmartMeterModel.Store.FK__UserProfi__UserI__3B40CD36">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserRole__AppUse__40F9A68C" Association="SmartMeterModel.Store.FK__UserRole__AppUse__40F9A68C">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="UserRole" EntitySet="UserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserRole__RoleId__41EDCAC5" Association="SmartMeterModel.Store.FK__UserRole__RoleId__41EDCAC5">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="UserRole" EntitySet="UserRole" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="AddressId" />
+          </Key>
+          <Property Name="AddressId" Type="int" Nullable="false" />
+          <Property Name="Address1" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Address2" Type="varchar" MaxLength="255" />
+          <Property Name="Phone1" Type="varchar" MaxLength="25" />
+          <Property Name="Phone2" Type="varchar" MaxLength="25" />
+          <Property Name="CellPhone" Type="varchar" MaxLength="25" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CretaedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AppUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="PasswordSalt" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="IsLoggedIn" Type="bit" Nullable="false" />
+          <Property Name="LastLogIn" Type="datetime" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="BillId" />
+          </Key>
+          <Property Name="BillId" Type="int" Nullable="false" />
+          <Property Name="DeviceId" Type="int" Nullable="false" />
+          <Property Name="BillingPeriodId" Type="int" />
+          <Property Name="TotalUnit" Type="float" Nullable="false" />
+          <Property Name="TotalUnitCost" Type="float" Nullable="false" />
+          <Property Name="TotalVAT" Type="float" Nullable="false" />
+          <Property Name="Surcharge" Type="float" Nullable="false" />
+          <Property Name="TotalCost" Type="float" Nullable="false" />
+          <Property Name="DueDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BillingPeriod">
+          <Key>
+            <PropertyRef Name="BillingPeriodId" />
+          </Key>
+          <Property Name="BillingPeriodId" Type="int" Nullable="false" />
+          <Property Name="PeriodStartsFrom" Type="datetime" Nullable="false" />
+          <Property Name="PeriodEndsAt" Type="nchar" Nullable="false" MaxLength="20" />
+          <Property Name="CompanyId" Type="int" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BillingRate">
+          <Key>
+            <PropertyRef Name="BillingRateId" />
+          </Key>
+          <Property Name="BillingRateId" Type="int" Nullable="false" />
+          <Property Name="BillingRateConfigId" Type="int" Nullable="false" />
+          <Property Name="LimitTypeId" Type="int" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreteadBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" />
+        </EntityType>
+        <EntityType Name="BillingRateConfig">
+          <Key>
+            <PropertyRef Name="BillingRateConfigId" />
+          </Key>
+          <Property Name="BillingRateConfigId" Type="int" Nullable="false" />
+          <Property Name="BillSchemeId" Type="int" Nullable="false" />
+          <Property Name="TimeSchemeId" Type="int" />
+          <Property Name="LoadSchemeId" Type="int" />
+          <Property Name="AppliedDateFrom" Type="datetime" Nullable="false" />
+          <Property Name="AppliedDateTo" Type="datetime" Nullable="false" />
+          <Property Name="VAT" Type="float" Nullable="false" />
+          <Property Name="Currency" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BillScheme">
+          <Key>
+            <PropertyRef Name="BillSchemeId" />
+          </Key>
+          <Property Name="BillSchemeId" Type="int" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="BillSchemeName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="BillSchemeDescription" Type="text" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="CityName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Command">
+          <Key>
+            <PropertyRef Name="CommandId" />
+          </Key>
+          <Property Name="CommandId" Type="int" Nullable="false" />
+          <Property Name="CommandName" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="CommandValue">
+          <Key>
+            <PropertyRef Name="CommandValueId" />
+          </Key>
+          <Property Name="CommandValueId" Type="int" Nullable="false" />
+          <Property Name="DeviceTypeId" Type="int" Nullable="false" />
+          <Property Name="CommandId" Type="int" Nullable="false" />
+          <Property Name="Value" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Website" Type="varchar" MaxLength="255" />
+          <Property Name="AddressId" Type="int" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyUser">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="int" Nullable="false" />
+          <Property Name="CountryCode" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="CountryName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="DeviceId" />
+          </Key>
+          <Property Name="DeviceId" Type="int" Nullable="false" />
+          <Property Name="DeviceTypeId" Type="int" Nullable="false" />
+          <Property Name="HardwareId" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="ProductionDate" Type="datetime" />
+          <Property Name="ExpireDate" Type="datetime" />
+          <Property Name="Comment" Type="text" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="ParentDeviceId" Type="int" />
+          <Property Name="NumberOfSubDevice" Type="int" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="BillSchemeId" Type="int" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeviceProperty">
+          <Key>
+            <PropertyRef Name="DevicePropertyId" />
+          </Key>
+          <Property Name="DevicePropertyId" Type="int" Nullable="false" />
+          <Property Name="DeviceId" Type="int" Nullable="false" />
+          <Property Name="PropertyName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="PropertyParameter" Type="varchar" MaxLength="50" />
+          <Property Name="PropertyValue" Type="varchar" MaxLength="255" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeviceType">
+          <Key>
+            <PropertyRef Name="DeviceTypeId" />
+          </Key>
+          <Property Name="DeviceTypeId" Type="int" Nullable="false" />
+          <Property Name="DeviceTypeName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="DeviceTypeDecription" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="DeviceTypeProperty">
+          <Key>
+            <PropertyRef Name="DeviceTypePropertyId" />
+          </Key>
+          <Property Name="DeviceTypePropertyId" Type="int" Nullable="false" />
+          <Property Name="DeviceTypeId" Type="int" Nullable="false" />
+          <Property Name="PropertyName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="PropertyParameter" Type="varchar" MaxLength="50" />
+          <Property Name="PropertyValue" Type="varchar" MaxLength="255" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LimitType">
+          <Key>
+            <PropertyRef Name="LimitTypeId" />
+          </Key>
+          <Property Name="LimitTypeId" Type="int" Nullable="false" />
+          <Property Name="LimitName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LimitDescription" Type="varchar" MaxLength="200" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LoadScheme">
+          <Key>
+            <PropertyRef Name="LoadSchemeId" />
+          </Key>
+          <Property Name="LoadSchemeId" Type="int" Nullable="false" />
+          <Property Name="CompanyId" Type="int" />
+          <Property Name="LoadSchemeName" Type="varchar" MaxLength="150" />
+          <Property Name="LoadSchemeDescription" Type="text" />
+          <Property Name="LoadFrom" Type="float" Nullable="false" />
+          <Property Name="LoadTo" Type="float" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MeterProperty">
+          <Key>
+            <PropertyRef Name="DeviceId" />
+            <PropertyRef Name="MeterPropertyId" />
+          </Key>
+          <Property Name="DeviceId" Type="int" Nullable="false" />
+          <Property Name="MeterPropertyId" Type="int" Nullable="false" />
+          <Property Name="Voltage" Type="float" Nullable="false" />
+          <Property Name="RealPower" Type="float" Nullable="false" />
+          <Property Name="PowerFactor" Type="float" Nullable="false" />
+          <Property Name="KWHR" Type="float" Nullable="false" />
+          <Property Name="TransmissionTime" Type="datetime" Nullable="false" />
+          <Property Name="LoggedAt" Type="datetime" />
+          <Property Name="IsLatest" Type="bit" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="UpdatedBy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="PermissionId" />
+          </Key>
+          <Property Name="PermissionId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RolePermission">
+          <Key>
+            <PropertyRef Name="RolePermissionId" />
+          </Key>
+          <Property Name="RolePermissionId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="PermissionId" Type="int" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TimeScheme">
+          <Key>
+            <PropertyRef Name="TimeSchemeId" />
+          </Key>
+          <Property Name="TimeSchemeId" Type="int" Nullable="false" />
+          <Property Name="CompanyId" Type="int" />
+          <Property Name="TimeSchemeName" Type="varchar" MaxLength="150" />
+          <Property Name="TimeSchemeDescription" Type="text" />
+          <Property Name="StartsAt" Type="datetime" Nullable="false" />
+          <Property Name="EndsAt" Type="datetime" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserLog">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="LogInTime" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="LogInTime" Type="datetime" Nullable="false" />
+          <Property Name="LogOutTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserPermission">
+          <Key>
+            <PropertyRef Name="UserPermissionId" />
+          </Key>
+          <Property Name="UserPermissionId" Type="int" Nullable="false" />
+          <Property Name="PermissionId" Type="int" Nullable="false" />
+          <Property Name="AppUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sex" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="AddressId" Type="int" Nullable="false" />
+          <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+          <Property Name="SocialSecurityNumber" Type="varchar" MaxLength="100" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="UserRoleId" />
+          </Key>
+          <Property Name="UserRoleId" Type="int" Nullable="false" />
+          <Property Name="AppUserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Address__CityId__117F9D94">
+          <End Role="City" Type="SmartMeterModel.Store.City" Multiplicity="1" />
+          <End Role="Address" Type="SmartMeterModel.Store.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Address__Country__1273C1CD">
+          <End Role="Country" Type="SmartMeterModel.Store.Country" Multiplicity="1" />
+          <End Role="Address" Type="SmartMeterModel.Store.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Address__Cretaed__1367E606">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Address" Type="SmartMeterModel.Store.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="CretaedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Address__Updated__145C0A3F">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Address" Type="SmartMeterModel.Store.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__BillingPer__73BA3083">
+          <End Role="BillingPeriod" Type="SmartMeterModel.Store.BillingPeriod" Multiplicity="0..1" />
+          <End Role="Bill" Type="SmartMeterModel.Store.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BillingPeriod">
+              <PropertyRef Name="BillingPeriodId" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="BillingPeriodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__CreatedBy__71D1E811">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Bill" Type="SmartMeterModel.Store.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__DeviceId__70DDC3D8">
+          <End Role="Device" Type="SmartMeterModel.Store.Device" Multiplicity="1" />
+          <End Role="Bill" Type="SmartMeterModel.Store.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="DeviceId" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="DeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__UpdatedBy__72C60C4A">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Bill" Type="SmartMeterModel.Store.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingPe__Compa__3B75D760">
+          <End Role="Company" Type="SmartMeterModel.Store.Company" Multiplicity="0..1" />
+          <End Role="BillingPeriod" Type="SmartMeterModel.Store.BillingPeriod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="BillingPeriod">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingPe__Creat__3C69FB99">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="BillingPeriod" Type="SmartMeterModel.Store.BillingPeriod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingPeriod">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingPe__Updat__3D5E1FD2">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="BillingPeriod" Type="SmartMeterModel.Store.BillingPeriod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingPeriod">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Billi__7A672E12">
+          <End Role="BillingRateConfig" Type="SmartMeterModel.Store.BillingRateConfig" Multiplicity="1" />
+          <End Role="BillingRate" Type="SmartMeterModel.Store.BillingRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BillingRateConfig">
+              <PropertyRef Name="BillingRateConfigId" />
+            </Principal>
+            <Dependent Role="BillingRate">
+              <PropertyRef Name="BillingRateConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__BillS__440B1D61">
+          <End Role="BillScheme" Type="SmartMeterModel.Store.BillScheme" Multiplicity="1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.Store.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BillScheme">
+              <PropertyRef Name="BillSchemeId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="BillSchemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Creat__44FF419A">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.Store.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Crete__7C4F7684">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="BillingRate" Type="SmartMeterModel.Store.BillingRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingRate">
+              <PropertyRef Name="CreteadBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Limit__7B5B524B">
+          <End Role="LimitType" Type="SmartMeterModel.Store.LimitType" Multiplicity="0..1" />
+          <End Role="BillingRate" Type="SmartMeterModel.Store.BillingRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LimitType">
+              <PropertyRef Name="LimitTypeId" />
+            </Principal>
+            <Dependent Role="BillingRate">
+              <PropertyRef Name="LimitTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__LoadS__47DBAE45">
+          <End Role="LoadScheme" Type="SmartMeterModel.Store.LoadScheme" Multiplicity="0..1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.Store.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoadScheme">
+              <PropertyRef Name="LoadSchemeId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="LoadSchemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__TimeS__46E78A0C">
+          <End Role="TimeScheme" Type="SmartMeterModel.Store.TimeScheme" Multiplicity="0..1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.Store.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeScheme">
+              <PropertyRef Name="TimeSchemeId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="TimeSchemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Updat__45F365D3">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.Store.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Updat__7D439ABD">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="0..1" />
+          <End Role="BillingRate" Type="SmartMeterModel.Store.BillingRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingRate">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillSchem__Compa__239E4DCF">
+          <End Role="Company" Type="SmartMeterModel.Store.Company" Multiplicity="1" />
+          <End Role="BillScheme" Type="SmartMeterModel.Store.BillScheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="BillScheme">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__City__CountryId__0AD2A005">
+          <End Role="Country" Type="SmartMeterModel.Store.Country" Multiplicity="1" />
+          <End Role="City" Type="SmartMeterModel.Store.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CommandVa__Comma__02FC7413">
+          <End Role="Command" Type="SmartMeterModel.Store.Command" Multiplicity="1" />
+          <End Role="CommandValue" Type="SmartMeterModel.Store.CommandValue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Command">
+              <PropertyRef Name="CommandId" />
+            </Principal>
+            <Dependent Role="CommandValue">
+              <PropertyRef Name="CommandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CommandVa__Devic__02084FDA">
+          <End Role="DeviceType" Type="SmartMeterModel.Store.DeviceType" Multiplicity="1" />
+          <End Role="CommandValue" Type="SmartMeterModel.Store.CommandValue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="DeviceTypeId" />
+            </Principal>
+            <Dependent Role="CommandValue">
+              <PropertyRef Name="DeviceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Company__Address__1B0907CE">
+          <End Role="Address" Type="SmartMeterModel.Store.Address" Multiplicity="1" />
+          <End Role="Company" Type="SmartMeterModel.Store.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="AddressId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Company__Created__1BFD2C07">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Company" Type="SmartMeterModel.Store.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Company__Updated__1CF15040">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Company" Type="SmartMeterModel.Store.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CompanyUs__Compa__09A971A2">
+          <End Role="Company" Type="SmartMeterModel.Store.Company" Multiplicity="1" />
+          <End Role="CompanyUser" Type="SmartMeterModel.Store.CompanyUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="CompanyUser">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CompanyUs__Creat__0B91BA14">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="CompanyUser" Type="SmartMeterModel.Store.CompanyUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="CompanyUser">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CompanyUs__Updat__0C85DE4D">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="CompanyUser" Type="SmartMeterModel.Store.CompanyUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="CompanyUser">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CompanyUs__UserI__0A9D95DB">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="CompanyUser" Type="SmartMeterModel.Store.CompanyUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="CompanyUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__BillSche__571DF1D5">
+          <End Role="BillScheme" Type="SmartMeterModel.Store.BillScheme" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Store.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BillScheme">
+              <PropertyRef Name="BillSchemeId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="BillSchemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__CreatedB__5441852A">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Store.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__DeviceTy__52593CB8">
+          <End Role="DeviceType" Type="SmartMeterModel.Store.DeviceType" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Store.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="DeviceTypeId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="DeviceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__ParentDe__5629CD9C">
+          <End Role="Device" Type="SmartMeterModel.Store.Device" Multiplicity="0..1" />
+          <End Role="Device1" Type="SmartMeterModel.Store.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="DeviceId" />
+            </Principal>
+            <Dependent Role="Device1">
+              <PropertyRef Name="ParentDeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__UpdatedB__5535A963">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Store.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__UserId__534D60F1">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Store.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DevicePro__Devic__1332DBDC">
+          <End Role="Device" Type="SmartMeterModel.Store.Device" Multiplicity="1" />
+          <End Role="DeviceProperty" Type="SmartMeterModel.Store.DeviceProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="DeviceId" />
+            </Principal>
+            <Dependent Role="DeviceProperty">
+              <PropertyRef Name="DeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeviceTyp__Devic__19DFD96B">
+          <End Role="DeviceType" Type="SmartMeterModel.Store.DeviceType" Multiplicity="1" />
+          <End Role="DeviceTypeProperty" Type="SmartMeterModel.Store.DeviceTypeProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="DeviceTypeId" />
+            </Principal>
+            <Dependent Role="DeviceTypeProperty">
+              <PropertyRef Name="DeviceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LimitType__Creat__5DCAEF64">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="LimitType" Type="SmartMeterModel.Store.LimitType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="LimitType">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LimitType__Updat__5EBF139D">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="LimitType" Type="SmartMeterModel.Store.LimitType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="LimitType">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LoadSchem__Compa__2E1BDC42">
+          <End Role="Company" Type="SmartMeterModel.Store.Company" Multiplicity="0..1" />
+          <End Role="LoadScheme" Type="SmartMeterModel.Store.LoadScheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="LoadScheme">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MeterProp__Creat__2180FB33">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="MeterProperty" Type="SmartMeterModel.Store.MeterProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="MeterProperty">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MeterProp__Devic__208CD6FA">
+          <End Role="Device" Type="SmartMeterModel.Store.Device" Multiplicity="1" />
+          <End Role="MeterProperty" Type="SmartMeterModel.Store.MeterProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="DeviceId" />
+            </Principal>
+            <Dependent Role="MeterProperty">
+              <PropertyRef Name="DeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MeterProp__Updat__22751F6C">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="MeterProperty" Type="SmartMeterModel.Store.MeterProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="MeterProperty">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RolePermi__Permi__29221CFB">
+          <End Role="Permission" Type="SmartMeterModel.Store.Permission" Multiplicity="1" />
+          <End Role="RolePermission" Type="SmartMeterModel.Store.RolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="PermissionId" />
+            </Principal>
+            <Dependent Role="RolePermission">
+              <PropertyRef Name="PermissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RolePermi__RoleI__2A164134">
+          <End Role="Role" Type="SmartMeterModel.Store.Role" Multiplicity="1" />
+          <End Role="RolePermission" Type="SmartMeterModel.Store.RolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="RolePermission">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TimeSchem__Compa__34C8D9D1">
+          <End Role="Company" Type="SmartMeterModel.Store.Company" Multiplicity="0..1" />
+          <End Role="TimeScheme" Type="SmartMeterModel.Store.TimeScheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="TimeScheme">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserLog__UserId__2EDAF651">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="UserLog" Type="SmartMeterModel.Store.UserLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserLog">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserPermi__AppUs__3493CFA7">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="UserPermission" Type="SmartMeterModel.Store.UserPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserPermission">
+              <PropertyRef Name="AppUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserPermi__Permi__339FAB6E">
+          <End Role="Permission" Type="SmartMeterModel.Store.Permission" Multiplicity="1" />
+          <End Role="UserPermission" Type="SmartMeterModel.Store.UserPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="PermissionId" />
+            </Principal>
+            <Dependent Role="UserPermission">
+              <PropertyRef Name="PermissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserProfi__Addre__3C34F16F">
+          <End Role="Address" Type="SmartMeterModel.Store.Address" Multiplicity="1" />
+          <End Role="UserProfile" Type="SmartMeterModel.Store.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="AddressId" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserProfi__UserI__3B40CD36">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="UserProfile" Type="SmartMeterModel.Store.UserProfile" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserRole__AppUse__40F9A68C">
+          <End Role="AppUser" Type="SmartMeterModel.Store.AppUser" Multiplicity="1" />
+          <End Role="UserRole" Type="SmartMeterModel.Store.UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="AppUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserRole__RoleId__41EDCAC5">
+          <End Role="Role" Type="SmartMeterModel.Store.Role" Multiplicity="1" />
+          <End Role="UserRole" Type="SmartMeterModel.Store.UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SmartMeterModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SmartMeterEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Addresses" EntityType="SmartMeterModel.Address" />
+          <EntitySet Name="AppUsers" EntityType="SmartMeterModel.AppUser" />
+          <EntitySet Name="Bills" EntityType="SmartMeterModel.Bill" />
+          <EntitySet Name="BillingPeriods" EntityType="SmartMeterModel.BillingPeriod" />
+          <EntitySet Name="BillingRates" EntityType="SmartMeterModel.BillingRate" />
+          <EntitySet Name="BillingRateConfigs" EntityType="SmartMeterModel.BillingRateConfig" />
+          <EntitySet Name="BillSchemes" EntityType="SmartMeterModel.BillScheme" />
+          <EntitySet Name="Cities" EntityType="SmartMeterModel.City" />
+          <EntitySet Name="Commands" EntityType="SmartMeterModel.Command" />
+          <EntitySet Name="CommandValues" EntityType="SmartMeterModel.CommandValue" />
+          <EntitySet Name="Companies" EntityType="SmartMeterModel.Company" />
+          <EntitySet Name="CompanyUsers" EntityType="SmartMeterModel.CompanyUser" />
+          <EntitySet Name="Countries" EntityType="SmartMeterModel.Country" />
+          <EntitySet Name="Devices" EntityType="SmartMeterModel.Device" />
+          <EntitySet Name="DeviceProperties" EntityType="SmartMeterModel.DeviceProperty" />
+          <EntitySet Name="DeviceTypes" EntityType="SmartMeterModel.DeviceType" />
+          <EntitySet Name="DeviceTypeProperties" EntityType="SmartMeterModel.DeviceTypeProperty" />
+          <EntitySet Name="LimitTypes" EntityType="SmartMeterModel.LimitType" />
+          <EntitySet Name="LoadSchemes" EntityType="SmartMeterModel.LoadScheme" />
+          <EntitySet Name="MeterProperties" EntityType="SmartMeterModel.MeterProperty" />
+          <EntitySet Name="Permissions" EntityType="SmartMeterModel.Permission" />
+          <EntitySet Name="Roles" EntityType="SmartMeterModel.Role" />
+          <EntitySet Name="RolePermissions" EntityType="SmartMeterModel.RolePermission" />
+          <EntitySet Name="TimeSchemes" EntityType="SmartMeterModel.TimeScheme" />
+          <EntitySet Name="UserLogs" EntityType="SmartMeterModel.UserLog" />
+          <EntitySet Name="UserPermissions" EntityType="SmartMeterModel.UserPermission" />
+          <EntitySet Name="UserProfiles" EntityType="SmartMeterModel.UserProfile" />
+          <EntitySet Name="UserRoles" EntityType="SmartMeterModel.UserRole" />
+          <AssociationSet Name="FK__Address__CityId__117F9D94" Association="SmartMeterModel.FK__Address__CityId__117F9D94">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Address__Country__1273C1CD" Association="SmartMeterModel.FK__Address__Country__1273C1CD">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Address__Cretaed__1367E606" Association="SmartMeterModel.FK__Address__Cretaed__1367E606">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Address__Updated__145C0A3F" Association="SmartMeterModel.FK__Address__Updated__145C0A3F">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Company__Address__1B0907CE" Association="SmartMeterModel.FK__Company__Address__1B0907CE">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserProfi__Addre__3C34F16F" Association="SmartMeterModel.FK__UserProfi__Addre__3C34F16F">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__CreatedBy__71D1E811" Association="SmartMeterModel.FK__Bill__CreatedBy__71D1E811">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__UpdatedBy__72C60C4A" Association="SmartMeterModel.FK__Bill__UpdatedBy__72C60C4A">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingPe__Creat__3C69FB99" Association="SmartMeterModel.FK__BillingPe__Creat__3C69FB99">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="BillingPeriod" EntitySet="BillingPeriods" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingPe__Updat__3D5E1FD2" Association="SmartMeterModel.FK__BillingPe__Updat__3D5E1FD2">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="BillingPeriod" EntitySet="BillingPeriods" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Creat__44FF419A" Association="SmartMeterModel.FK__BillingRa__Creat__44FF419A">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfigs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Crete__7C4F7684" Association="SmartMeterModel.FK__BillingRa__Crete__7C4F7684">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="BillingRate" EntitySet="BillingRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Updat__45F365D3" Association="SmartMeterModel.FK__BillingRa__Updat__45F365D3">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfigs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Updat__7D439ABD" Association="SmartMeterModel.FK__BillingRa__Updat__7D439ABD">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="BillingRate" EntitySet="BillingRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Company__Created__1BFD2C07" Association="SmartMeterModel.FK__Company__Created__1BFD2C07">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Company__Updated__1CF15040" Association="SmartMeterModel.FK__Company__Updated__1CF15040">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CompanyUs__Creat__0B91BA14" Association="SmartMeterModel.FK__CompanyUs__Creat__0B91BA14">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="CompanyUser" EntitySet="CompanyUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CompanyUs__Updat__0C85DE4D" Association="SmartMeterModel.FK__CompanyUs__Updat__0C85DE4D">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="CompanyUser" EntitySet="CompanyUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CompanyUs__UserI__0A9D95DB" Association="SmartMeterModel.FK__CompanyUs__UserI__0A9D95DB">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="CompanyUser" EntitySet="CompanyUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__CreatedB__5441852A" Association="SmartMeterModel.FK__Device__CreatedB__5441852A">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__UpdatedB__5535A963" Association="SmartMeterModel.FK__Device__UpdatedB__5535A963">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__UserId__534D60F1" Association="SmartMeterModel.FK__Device__UserId__534D60F1">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LimitType__Creat__5DCAEF64" Association="SmartMeterModel.FK__LimitType__Creat__5DCAEF64">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="LimitType" EntitySet="LimitTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LimitType__Updat__5EBF139D" Association="SmartMeterModel.FK__LimitType__Updat__5EBF139D">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="LimitType" EntitySet="LimitTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MeterProp__Creat__2180FB33" Association="SmartMeterModel.FK__MeterProp__Creat__2180FB33">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="MeterProperty" EntitySet="MeterProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MeterProp__Updat__22751F6C" Association="SmartMeterModel.FK__MeterProp__Updat__22751F6C">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="MeterProperty" EntitySet="MeterProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserLog__UserId__2EDAF651" Association="SmartMeterModel.FK__UserLog__UserId__2EDAF651">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="UserLog" EntitySet="UserLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserPermi__AppUs__3493CFA7" Association="SmartMeterModel.FK__UserPermi__AppUs__3493CFA7">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="UserPermission" EntitySet="UserPermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserProfi__UserI__3B40CD36" Association="SmartMeterModel.FK__UserProfi__UserI__3B40CD36">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserRole__AppUse__40F9A68C" Association="SmartMeterModel.FK__UserRole__AppUse__40F9A68C">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="UserRole" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__BillingPer__73BA3083" Association="SmartMeterModel.FK__Bill__BillingPer__73BA3083">
+            <End Role="BillingPeriod" EntitySet="BillingPeriods" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bill__DeviceId__70DDC3D8" Association="SmartMeterModel.FK__Bill__DeviceId__70DDC3D8">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingPe__Compa__3B75D760" Association="SmartMeterModel.FK__BillingPe__Compa__3B75D760">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="BillingPeriod" EntitySet="BillingPeriods" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Billi__7A672E12" Association="SmartMeterModel.FK__BillingRa__Billi__7A672E12">
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfigs" />
+            <End Role="BillingRate" EntitySet="BillingRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__Limit__7B5B524B" Association="SmartMeterModel.FK__BillingRa__Limit__7B5B524B">
+            <End Role="LimitType" EntitySet="LimitTypes" />
+            <End Role="BillingRate" EntitySet="BillingRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__BillS__440B1D61" Association="SmartMeterModel.FK__BillingRa__BillS__440B1D61">
+            <End Role="BillScheme" EntitySet="BillSchemes" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfigs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__LoadS__47DBAE45" Association="SmartMeterModel.FK__BillingRa__LoadS__47DBAE45">
+            <End Role="LoadScheme" EntitySet="LoadSchemes" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfigs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillingRa__TimeS__46E78A0C" Association="SmartMeterModel.FK__BillingRa__TimeS__46E78A0C">
+            <End Role="TimeScheme" EntitySet="TimeSchemes" />
+            <End Role="BillingRateConfig" EntitySet="BillingRateConfigs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillSchem__Compa__239E4DCF" Association="SmartMeterModel.FK__BillSchem__Compa__239E4DCF">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="BillScheme" EntitySet="BillSchemes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__BillSche__571DF1D5" Association="SmartMeterModel.FK__Device__BillSche__571DF1D5">
+            <End Role="BillScheme" EntitySet="BillSchemes" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__City__CountryId__0AD2A005" Association="SmartMeterModel.FK__City__CountryId__0AD2A005">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="City" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CommandVa__Comma__02FC7413" Association="SmartMeterModel.FK__CommandVa__Comma__02FC7413">
+            <End Role="Command" EntitySet="Commands" />
+            <End Role="CommandValue" EntitySet="CommandValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CommandVa__Devic__02084FDA" Association="SmartMeterModel.FK__CommandVa__Devic__02084FDA">
+            <End Role="DeviceType" EntitySet="DeviceTypes" />
+            <End Role="CommandValue" EntitySet="CommandValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CompanyUs__Compa__09A971A2" Association="SmartMeterModel.FK__CompanyUs__Compa__09A971A2">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="CompanyUser" EntitySet="CompanyUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LoadSchem__Compa__2E1BDC42" Association="SmartMeterModel.FK__LoadSchem__Compa__2E1BDC42">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="LoadScheme" EntitySet="LoadSchemes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TimeSchem__Compa__34C8D9D1" Association="SmartMeterModel.FK__TimeSchem__Compa__34C8D9D1">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="TimeScheme" EntitySet="TimeSchemes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__DeviceTy__52593CB8" Association="SmartMeterModel.FK__Device__DeviceTy__52593CB8">
+            <End Role="DeviceType" EntitySet="DeviceTypes" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__ParentDe__5629CD9C" Association="SmartMeterModel.FK__Device__ParentDe__5629CD9C">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="Device1" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DevicePro__Devic__1332DBDC" Association="SmartMeterModel.FK__DevicePro__Devic__1332DBDC">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="DeviceProperty" EntitySet="DeviceProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MeterProp__Devic__208CD6FA" Association="SmartMeterModel.FK__MeterProp__Devic__208CD6FA">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="MeterProperty" EntitySet="MeterProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeviceTyp__Devic__19DFD96B" Association="SmartMeterModel.FK__DeviceTyp__Devic__19DFD96B">
+            <End Role="DeviceType" EntitySet="DeviceTypes" />
+            <End Role="DeviceTypeProperty" EntitySet="DeviceTypeProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RolePermi__Permi__29221CFB" Association="SmartMeterModel.FK__RolePermi__Permi__29221CFB">
+            <End Role="Permission" EntitySet="Permissions" />
+            <End Role="RolePermission" EntitySet="RolePermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserPermi__Permi__339FAB6E" Association="SmartMeterModel.FK__UserPermi__Permi__339FAB6E">
+            <End Role="Permission" EntitySet="Permissions" />
+            <End Role="UserPermission" EntitySet="UserPermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RolePermi__RoleI__2A164134" Association="SmartMeterModel.FK__RolePermi__RoleI__2A164134">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="RolePermission" EntitySet="RolePermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserRole__RoleId__41EDCAC5" Association="SmartMeterModel.FK__UserRole__RoleId__41EDCAC5">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="UserRole" EntitySet="UserRoles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="AddressId" />
+          </Key>
+          <Property Name="AddressId" Type="Int32" Nullable="false" />
+          <Property Name="Address1" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Address2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Phone1" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="Phone2" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="CellPhone" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CretaedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="City" Relationship="SmartMeterModel.FK__Address__CityId__117F9D94" FromRole="Address" ToRole="City" />
+          <NavigationProperty Name="Country" Relationship="SmartMeterModel.FK__Address__Country__1273C1CD" FromRole="Address" ToRole="Country" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__Address__Cretaed__1367E606" FromRole="Address" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__Address__Updated__145C0A3F" FromRole="Address" ToRole="AppUser" />
+          <NavigationProperty Name="Companies" Relationship="SmartMeterModel.FK__Company__Address__1B0907CE" FromRole="Address" ToRole="Company" />
+          <NavigationProperty Name="UserProfiles" Relationship="SmartMeterModel.FK__UserProfi__Addre__3C34F16F" FromRole="Address" ToRole="UserProfile" />
+        </EntityType>
+        <EntityType Name="AppUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="IsLoggedIn" Type="Boolean" Nullable="false" />
+          <Property Name="LastLogIn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Addresses" Relationship="SmartMeterModel.FK__Address__Cretaed__1367E606" FromRole="AppUser" ToRole="Address" />
+          <NavigationProperty Name="Addresses1" Relationship="SmartMeterModel.FK__Address__Updated__145C0A3F" FromRole="AppUser" ToRole="Address" />
+          <NavigationProperty Name="Bills" Relationship="SmartMeterModel.FK__Bill__CreatedBy__71D1E811" FromRole="AppUser" ToRole="Bill" />
+          <NavigationProperty Name="Bills1" Relationship="SmartMeterModel.FK__Bill__UpdatedBy__72C60C4A" FromRole="AppUser" ToRole="Bill" />
+          <NavigationProperty Name="BillingPeriods" Relationship="SmartMeterModel.FK__BillingPe__Creat__3C69FB99" FromRole="AppUser" ToRole="BillingPeriod" />
+          <NavigationProperty Name="BillingPeriods1" Relationship="SmartMeterModel.FK__BillingPe__Updat__3D5E1FD2" FromRole="AppUser" ToRole="BillingPeriod" />
+          <NavigationProperty Name="BillingRateConfigs" Relationship="SmartMeterModel.FK__BillingRa__Creat__44FF419A" FromRole="AppUser" ToRole="BillingRateConfig" />
+          <NavigationProperty Name="BillingRates" Relationship="SmartMeterModel.FK__BillingRa__Crete__7C4F7684" FromRole="AppUser" ToRole="BillingRate" />
+          <NavigationProperty Name="BillingRateConfigs1" Relationship="SmartMeterModel.FK__BillingRa__Updat__45F365D3" FromRole="AppUser" ToRole="BillingRateConfig" />
+          <NavigationProperty Name="BillingRates1" Relationship="SmartMeterModel.FK__BillingRa__Updat__7D439ABD" FromRole="AppUser" ToRole="BillingRate" />
+          <NavigationProperty Name="Companies" Relationship="SmartMeterModel.FK__Company__Created__1BFD2C07" FromRole="AppUser" ToRole="Company" />
+          <NavigationProperty Name="Companies1" Relationship="SmartMeterModel.FK__Company__Updated__1CF15040" FromRole="AppUser" ToRole="Company" />
+          <NavigationProperty Name="CompanyUsers" Relationship="SmartMeterModel.FK__CompanyUs__Creat__0B91BA14" FromRole="AppUser" ToRole="CompanyUser" />
+          <NavigationProperty Name="CompanyUsers1" Relationship="SmartMeterModel.FK__CompanyUs__Updat__0C85DE4D" FromRole="AppUser" ToRole="CompanyUser" />
+          <NavigationProperty Name="CompanyUsers2" Relationship="SmartMeterModel.FK__CompanyUs__UserI__0A9D95DB" FromRole="AppUser" ToRole="CompanyUser" />
+          <NavigationProperty Name="Devices" Relationship="SmartMeterModel.FK__Device__CreatedB__5441852A" FromRole="AppUser" ToRole="Device" />
+          <NavigationProperty Name="Devices1" Relationship="SmartMeterModel.FK__Device__UpdatedB__5535A963" FromRole="AppUser" ToRole="Device" />
+          <NavigationProperty Name="Devices2" Relationship="SmartMeterModel.FK__Device__UserId__534D60F1" FromRole="AppUser" ToRole="Device" />
+          <NavigationProperty Name="LimitTypes" Relationship="SmartMeterModel.FK__LimitType__Creat__5DCAEF64" FromRole="AppUser" ToRole="LimitType" />
+          <NavigationProperty Name="LimitTypes1" Relationship="SmartMeterModel.FK__LimitType__Updat__5EBF139D" FromRole="AppUser" ToRole="LimitType" />
+          <NavigationProperty Name="MeterProperties" Relationship="SmartMeterModel.FK__MeterProp__Creat__2180FB33" FromRole="AppUser" ToRole="MeterProperty" />
+          <NavigationProperty Name="MeterProperties1" Relationship="SmartMeterModel.FK__MeterProp__Updat__22751F6C" FromRole="AppUser" ToRole="MeterProperty" />
+          <NavigationProperty Name="UserLogs" Relationship="SmartMeterModel.FK__UserLog__UserId__2EDAF651" FromRole="AppUser" ToRole="UserLog" />
+          <NavigationProperty Name="UserPermissions" Relationship="SmartMeterModel.FK__UserPermi__AppUs__3493CFA7" FromRole="AppUser" ToRole="UserPermission" />
+          <NavigationProperty Name="UserProfile" Relationship="SmartMeterModel.FK__UserProfi__UserI__3B40CD36" FromRole="AppUser" ToRole="UserProfile" />
+          <NavigationProperty Name="UserRoles" Relationship="SmartMeterModel.FK__UserRole__AppUse__40F9A68C" FromRole="AppUser" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="BillId" />
+          </Key>
+          <Property Name="BillId" Type="Int32" Nullable="false" />
+          <Property Name="DeviceId" Type="Int32" Nullable="false" />
+          <Property Name="BillingPeriodId" Type="Int32" />
+          <Property Name="TotalUnit" Type="Double" Nullable="false" />
+          <Property Name="TotalUnitCost" Type="Double" Nullable="false" />
+          <Property Name="TotalVAT" Type="Double" Nullable="false" />
+          <Property Name="Surcharge" Type="Double" Nullable="false" />
+          <Property Name="TotalCost" Type="Double" Nullable="false" />
+          <Property Name="DueDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__Bill__CreatedBy__71D1E811" FromRole="Bill" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__Bill__UpdatedBy__72C60C4A" FromRole="Bill" ToRole="AppUser" />
+          <NavigationProperty Name="BillingPeriod" Relationship="SmartMeterModel.FK__Bill__BillingPer__73BA3083" FromRole="Bill" ToRole="BillingPeriod" />
+          <NavigationProperty Name="Device" Relationship="SmartMeterModel.FK__Bill__DeviceId__70DDC3D8" FromRole="Bill" ToRole="Device" />
+        </EntityType>
+        <EntityType Name="BillingPeriod">
+          <Key>
+            <PropertyRef Name="BillingPeriodId" />
+          </Key>
+          <Property Name="BillingPeriodId" Type="Int32" Nullable="false" />
+          <Property Name="PeriodStartsFrom" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PeriodEndsAt" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+          <Property Name="CompanyId" Type="Int32" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__BillingPe__Creat__3C69FB99" FromRole="BillingPeriod" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__BillingPe__Updat__3D5E1FD2" FromRole="BillingPeriod" ToRole="AppUser" />
+          <NavigationProperty Name="Bills" Relationship="SmartMeterModel.FK__Bill__BillingPer__73BA3083" FromRole="BillingPeriod" ToRole="Bill" />
+          <NavigationProperty Name="Company" Relationship="SmartMeterModel.FK__BillingPe__Compa__3B75D760" FromRole="BillingPeriod" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="BillingRate">
+          <Key>
+            <PropertyRef Name="BillingRateId" />
+          </Key>
+          <Property Name="BillingRateId" Type="Int32" Nullable="false" />
+          <Property Name="BillingRateConfigId" Type="Int32" Nullable="false" />
+          <Property Name="LimitTypeId" Type="Int32" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreteadBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__BillingRa__Crete__7C4F7684" FromRole="BillingRate" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__BillingRa__Updat__7D439ABD" FromRole="BillingRate" ToRole="AppUser" />
+          <NavigationProperty Name="BillingRateConfig" Relationship="SmartMeterModel.FK__BillingRa__Billi__7A672E12" FromRole="BillingRate" ToRole="BillingRateConfig" />
+          <NavigationProperty Name="LimitType" Relationship="SmartMeterModel.FK__BillingRa__Limit__7B5B524B" FromRole="BillingRate" ToRole="LimitType" />
+        </EntityType>
+        <EntityType Name="BillingRateConfig">
+          <Key>
+            <PropertyRef Name="BillingRateConfigId" />
+          </Key>
+          <Property Name="BillingRateConfigId" Type="Int32" Nullable="false" />
+          <Property Name="BillSchemeId" Type="Int32" Nullable="false" />
+          <Property Name="TimeSchemeId" Type="Int32" />
+          <Property Name="LoadSchemeId" Type="Int32" />
+          <Property Name="AppliedDateFrom" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AppliedDateTo" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="VAT" Type="Double" Nullable="false" />
+          <Property Name="Currency" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__BillingRa__Creat__44FF419A" FromRole="BillingRateConfig" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__BillingRa__Updat__45F365D3" FromRole="BillingRateConfig" ToRole="AppUser" />
+          <NavigationProperty Name="BillingRates" Relationship="SmartMeterModel.FK__BillingRa__Billi__7A672E12" FromRole="BillingRateConfig" ToRole="BillingRate" />
+          <NavigationProperty Name="BillScheme" Relationship="SmartMeterModel.FK__BillingRa__BillS__440B1D61" FromRole="BillingRateConfig" ToRole="BillScheme" />
+          <NavigationProperty Name="LoadScheme" Relationship="SmartMeterModel.FK__BillingRa__LoadS__47DBAE45" FromRole="BillingRateConfig" ToRole="LoadScheme" />
+          <NavigationProperty Name="TimeScheme" Relationship="SmartMeterModel.FK__BillingRa__TimeS__46E78A0C" FromRole="BillingRateConfig" ToRole="TimeScheme" />
+        </EntityType>
+        <EntityType Name="BillScheme">
+          <Key>
+            <PropertyRef Name="BillSchemeId" />
+          </Key>
+          <Property Name="BillSchemeId" Type="Int32" Nullable="false" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="BillSchemeName" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="BillSchemeDescription" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="BillingRateConfigs" Relationship="SmartMeterModel.FK__BillingRa__BillS__440B1D61" FromRole="BillScheme" ToRole="BillingRateConfig" />
+          <NavigationProperty Name="Company" Relationship="SmartMeterModel.FK__BillSchem__Compa__239E4DCF" FromRole="BillScheme" ToRole="Company" />
+          <NavigationProperty Name="Devices" Relationship="SmartMeterModel.FK__Device__BillSche__571DF1D5" FromRole="BillScheme" ToRole="Device" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="CityName" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Addresses" Relationship="SmartMeterModel.FK__Address__CityId__117F9D94" FromRole="City" ToRole="Address" />
+          <NavigationProperty Name="Country" Relationship="SmartMeterModel.FK__City__CountryId__0AD2A005" FromRole="City" ToRole="Country" />
+        </EntityType>
+        <EntityType Name="Command">
+          <Key>
+            <PropertyRef Name="CommandId" />
+          </Key>
+          <Property Name="CommandId" Type="Int32" Nullable="false" />
+          <Property Name="CommandName" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CommandValues" Relationship="SmartMeterModel.FK__CommandVa__Comma__02FC7413" FromRole="Command" ToRole="CommandValue" />
+        </EntityType>
+        <EntityType Name="CommandValue">
+          <Key>
+            <PropertyRef Name="CommandValueId" />
+          </Key>
+          <Property Name="CommandValueId" Type="Int32" Nullable="false" />
+          <Property Name="DeviceTypeId" Type="Int32" Nullable="false" />
+          <Property Name="CommandId" Type="Int32" Nullable="false" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Command" Relationship="SmartMeterModel.FK__CommandVa__Comma__02FC7413" FromRole="CommandValue" ToRole="Command" />
+          <NavigationProperty Name="DeviceType" Relationship="SmartMeterModel.FK__CommandVa__Devic__02084FDA" FromRole="CommandValue" ToRole="DeviceType" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Website" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="AddressId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Address" Relationship="SmartMeterModel.FK__Company__Address__1B0907CE" FromRole="Company" ToRole="Address" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__Company__Created__1BFD2C07" FromRole="Company" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__Company__Updated__1CF15040" FromRole="Company" ToRole="AppUser" />
+          <NavigationProperty Name="BillingPeriods" Relationship="SmartMeterModel.FK__BillingPe__Compa__3B75D760" FromRole="Company" ToRole="BillingPeriod" />
+          <NavigationProperty Name="BillSchemes" Relationship="SmartMeterModel.FK__BillSchem__Compa__239E4DCF" FromRole="Company" ToRole="BillScheme" />
+          <NavigationProperty Name="CompanyUsers" Relationship="SmartMeterModel.FK__CompanyUs__Compa__09A971A2" FromRole="Company" ToRole="CompanyUser" />
+          <NavigationProperty Name="LoadSchemes" Relationship="SmartMeterModel.FK__LoadSchem__Compa__2E1BDC42" FromRole="Company" ToRole="LoadScheme" />
+          <NavigationProperty Name="TimeSchemes" Relationship="SmartMeterModel.FK__TimeSchem__Compa__34C8D9D1" FromRole="Company" ToRole="TimeScheme" />
+        </EntityType>
+        <EntityType Name="CompanyUser">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__CompanyUs__Creat__0B91BA14" FromRole="CompanyUser" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__CompanyUs__Updat__0C85DE4D" FromRole="CompanyUser" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser2" Relationship="SmartMeterModel.FK__CompanyUs__UserI__0A9D95DB" FromRole="CompanyUser" ToRole="AppUser" />
+          <NavigationProperty Name="Company" Relationship="SmartMeterModel.FK__CompanyUs__Compa__09A971A2" FromRole="CompanyUser" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <Property Name="CountryCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CountryName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Addresses" Relationship="SmartMeterModel.FK__Address__Country__1273C1CD" FromRole="Country" ToRole="Address" />
+          <NavigationProperty Name="Cities" Relationship="SmartMeterModel.FK__City__CountryId__0AD2A005" FromRole="Country" ToRole="City" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="DeviceId" />
+          </Key>
+          <Property Name="DeviceId" Type="Int32" Nullable="false" />
+          <Property Name="DeviceTypeId" Type="Int32" Nullable="false" />
+          <Property Name="HardwareId" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ProductionDate" Type="DateTime" Precision="3" />
+          <Property Name="ExpireDate" Type="DateTime" Precision="3" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="ParentDeviceId" Type="Int32" />
+          <Property Name="NumberOfSubDevice" Type="Int32" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="BillSchemeId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__Device__CreatedB__5441852A" FromRole="Device" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__Device__UpdatedB__5535A963" FromRole="Device" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser2" Relationship="SmartMeterModel.FK__Device__UserId__534D60F1" FromRole="Device" ToRole="AppUser" />
+          <NavigationProperty Name="Bills" Relationship="SmartMeterModel.FK__Bill__DeviceId__70DDC3D8" FromRole="Device" ToRole="Bill" />
+          <NavigationProperty Name="BillScheme" Relationship="SmartMeterModel.FK__Device__BillSche__571DF1D5" FromRole="Device" ToRole="BillScheme" />
+          <NavigationProperty Name="DeviceType" Relationship="SmartMeterModel.FK__Device__DeviceTy__52593CB8" FromRole="Device" ToRole="DeviceType" />
+          <NavigationProperty Name="Device1" Relationship="SmartMeterModel.FK__Device__ParentDe__5629CD9C" FromRole="Device" ToRole="Device1" />
+          <NavigationProperty Name="Device2" Relationship="SmartMeterModel.FK__Device__ParentDe__5629CD9C" FromRole="Device1" ToRole="Device" />
+          <NavigationProperty Name="DeviceProperties" Relationship="SmartMeterModel.FK__DevicePro__Devic__1332DBDC" FromRole="Device" ToRole="DeviceProperty" />
+          <NavigationProperty Name="MeterProperties" Relationship="SmartMeterModel.FK__MeterProp__Devic__208CD6FA" FromRole="Device" ToRole="MeterProperty" />
+        </EntityType>
+        <EntityType Name="DeviceProperty">
+          <Key>
+            <PropertyRef Name="DevicePropertyId" />
+          </Key>
+          <Property Name="DevicePropertyId" Type="Int32" Nullable="false" />
+          <Property Name="DeviceId" Type="Int32" Nullable="false" />
+          <Property Name="PropertyName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PropertyParameter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PropertyValue" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Device" Relationship="SmartMeterModel.FK__DevicePro__Devic__1332DBDC" FromRole="DeviceProperty" ToRole="Device" />
+        </EntityType>
+        <EntityType Name="DeviceType">
+          <Key>
+            <PropertyRef Name="DeviceTypeId" />
+          </Key>
+          <Property Name="DeviceTypeId" Type="Int32" Nullable="false" />
+          <Property Name="DeviceTypeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DeviceTypeDecription" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CommandValues" Relationship="SmartMeterModel.FK__CommandVa__Devic__02084FDA" FromRole="DeviceType" ToRole="CommandValue" />
+          <NavigationProperty Name="Devices" Relationship="SmartMeterModel.FK__Device__DeviceTy__52593CB8" FromRole="DeviceType" ToRole="Device" />
+          <NavigationProperty Name="DeviceTypeProperties" Relationship="SmartMeterModel.FK__DeviceTyp__Devic__19DFD96B" FromRole="DeviceType" ToRole="DeviceTypeProperty" />
+        </EntityType>
+        <EntityType Name="DeviceTypeProperty">
+          <Key>
+            <PropertyRef Name="DeviceTypePropertyId" />
+          </Key>
+          <Property Name="DeviceTypePropertyId" Type="Int32" Nullable="false" />
+          <Property Name="DeviceTypeId" Type="Int32" Nullable="false" />
+          <Property Name="PropertyName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PropertyParameter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PropertyValue" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="DeviceType" Relationship="SmartMeterModel.FK__DeviceTyp__Devic__19DFD96B" FromRole="DeviceTypeProperty" ToRole="DeviceType" />
+        </EntityType>
+        <EntityType Name="LimitType">
+          <Key>
+            <PropertyRef Name="LimitTypeId" />
+          </Key>
+          <Property Name="LimitTypeId" Type="Int32" Nullable="false" />
+          <Property Name="LimitName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LimitDescription" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__LimitType__Creat__5DCAEF64" FromRole="LimitType" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__LimitType__Updat__5EBF139D" FromRole="LimitType" ToRole="AppUser" />
+          <NavigationProperty Name="BillingRates" Relationship="SmartMeterModel.FK__BillingRa__Limit__7B5B524B" FromRole="LimitType" ToRole="BillingRate" />
+        </EntityType>
+        <EntityType Name="LoadScheme">
+          <Key>
+            <PropertyRef Name="LoadSchemeId" />
+          </Key>
+          <Property Name="LoadSchemeId" Type="Int32" Nullable="false" />
+          <Property Name="CompanyId" Type="Int32" />
+          <Property Name="LoadSchemeName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="LoadSchemeDescription" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="LoadFrom" Type="Double" Nullable="false" />
+          <Property Name="LoadTo" Type="Double" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="BillingRateConfigs" Relationship="SmartMeterModel.FK__BillingRa__LoadS__47DBAE45" FromRole="LoadScheme" ToRole="BillingRateConfig" />
+          <NavigationProperty Name="Company" Relationship="SmartMeterModel.FK__LoadSchem__Compa__2E1BDC42" FromRole="LoadScheme" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="MeterProperty">
+          <Key>
+            <PropertyRef Name="DeviceId" />
+            <PropertyRef Name="MeterPropertyId" />
+          </Key>
+          <Property Name="DeviceId" Type="Int32" Nullable="false" />
+          <Property Name="MeterPropertyId" Type="Int32" Nullable="false" />
+          <Property Name="Voltage" Type="Double" Nullable="false" />
+          <Property Name="RealPower" Type="Double" Nullable="false" />
+          <Property Name="PowerFactor" Type="Double" Nullable="false" />
+          <Property Name="KWHR" Type="Double" Nullable="false" />
+          <Property Name="TransmissionTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LoggedAt" Type="DateTime" Precision="3" />
+          <Property Name="IsLatest" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__MeterProp__Creat__2180FB33" FromRole="MeterProperty" ToRole="AppUser" />
+          <NavigationProperty Name="AppUser1" Relationship="SmartMeterModel.FK__MeterProp__Updat__22751F6C" FromRole="MeterProperty" ToRole="AppUser" />
+          <NavigationProperty Name="Device" Relationship="SmartMeterModel.FK__MeterProp__Devic__208CD6FA" FromRole="MeterProperty" ToRole="Device" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="PermissionId" />
+          </Key>
+          <Property Name="PermissionId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="RolePermissions" Relationship="SmartMeterModel.FK__RolePermi__Permi__29221CFB" FromRole="Permission" ToRole="RolePermission" />
+          <NavigationProperty Name="UserPermissions" Relationship="SmartMeterModel.FK__UserPermi__Permi__339FAB6E" FromRole="Permission" ToRole="UserPermission" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="RolePermissions" Relationship="SmartMeterModel.FK__RolePermi__RoleI__2A164134" FromRole="Role" ToRole="RolePermission" />
+          <NavigationProperty Name="UserRoles" Relationship="SmartMeterModel.FK__UserRole__RoleId__41EDCAC5" FromRole="Role" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="RolePermission">
+          <Key>
+            <PropertyRef Name="RolePermissionId" />
+          </Key>
+          <Property Name="RolePermissionId" Type="Int32" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="PermissionId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Permission" Relationship="SmartMeterModel.FK__RolePermi__Permi__29221CFB" FromRole="RolePermission" ToRole="Permission" />
+          <NavigationProperty Name="Role" Relationship="SmartMeterModel.FK__RolePermi__RoleI__2A164134" FromRole="RolePermission" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="TimeScheme">
+          <Key>
+            <PropertyRef Name="TimeSchemeId" />
+          </Key>
+          <Property Name="TimeSchemeId" Type="Int32" Nullable="false" />
+          <Property Name="CompanyId" Type="Int32" />
+          <Property Name="TimeSchemeName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="TimeSchemeDescription" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="StartsAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndsAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="BillingRateConfigs" Relationship="SmartMeterModel.FK__BillingRa__TimeS__46E78A0C" FromRole="TimeScheme" ToRole="BillingRateConfig" />
+          <NavigationProperty Name="Company" Relationship="SmartMeterModel.FK__TimeSchem__Compa__34C8D9D1" FromRole="TimeScheme" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="UserLog">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="LogInTime" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="LogInTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LogOutTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__UserLog__UserId__2EDAF651" FromRole="UserLog" ToRole="AppUser" />
+        </EntityType>
+        <EntityType Name="UserPermission">
+          <Key>
+            <PropertyRef Name="UserPermissionId" />
+          </Key>
+          <Property Name="UserPermissionId" Type="Int32" Nullable="false" />
+          <Property Name="PermissionId" Type="Int32" Nullable="false" />
+          <Property Name="AppUserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__UserPermi__AppUs__3493CFA7" FromRole="UserPermission" ToRole="AppUser" />
+          <NavigationProperty Name="Permission" Relationship="SmartMeterModel.FK__UserPermi__Permi__339FAB6E" FromRole="UserPermission" ToRole="Permission" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Sex" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="AddressId" Type="Int32" Nullable="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SocialSecurityNumber" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Address" Relationship="SmartMeterModel.FK__UserProfi__Addre__3C34F16F" FromRole="UserProfile" ToRole="Address" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__UserProfi__UserI__3B40CD36" FromRole="UserProfile" ToRole="AppUser" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="UserRoleId" />
+          </Key>
+          <Property Name="UserRoleId" Type="Int32" Nullable="false" />
+          <Property Name="AppUserId" Type="Int32" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="SmartMeterModel.FK__UserRole__AppUse__40F9A68C" FromRole="UserRole" ToRole="AppUser" />
+          <NavigationProperty Name="Role" Relationship="SmartMeterModel.FK__UserRole__RoleId__41EDCAC5" FromRole="UserRole" ToRole="Role" />
+        </EntityType>
+        <Association Name="FK__Address__CityId__117F9D94">
+          <End Role="City" Type="SmartMeterModel.City" Multiplicity="1" />
+          <End Role="Address" Type="SmartMeterModel.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Address__Country__1273C1CD">
+          <End Role="Country" Type="SmartMeterModel.Country" Multiplicity="1" />
+          <End Role="Address" Type="SmartMeterModel.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Address__Cretaed__1367E606">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="Address" Type="SmartMeterModel.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="CretaedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Address__Updated__145C0A3F">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="Address" Type="SmartMeterModel.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Company__Address__1B0907CE">
+          <End Role="Address" Type="SmartMeterModel.Address" Multiplicity="1" />
+          <End Role="Company" Type="SmartMeterModel.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="AddressId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserProfi__Addre__3C34F16F">
+          <End Role="Address" Type="SmartMeterModel.Address" Multiplicity="1" />
+          <End Role="UserProfile" Type="SmartMeterModel.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="AddressId" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__CreatedBy__71D1E811">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="Bill" Type="SmartMeterModel.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__UpdatedBy__72C60C4A">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="Bill" Type="SmartMeterModel.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingPe__Creat__3C69FB99">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="BillingPeriod" Type="SmartMeterModel.BillingPeriod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingPeriod">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingPe__Updat__3D5E1FD2">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="BillingPeriod" Type="SmartMeterModel.BillingPeriod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingPeriod">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Creat__44FF419A">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Crete__7C4F7684">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="BillingRate" Type="SmartMeterModel.BillingRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingRate">
+              <PropertyRef Name="CreteadBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Updat__45F365D3">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Updat__7D439ABD">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="0..1" />
+          <End Role="BillingRate" Type="SmartMeterModel.BillingRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BillingRate">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Company__Created__1BFD2C07">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="Company" Type="SmartMeterModel.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Company__Updated__1CF15040">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="Company" Type="SmartMeterModel.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CompanyUs__Creat__0B91BA14">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="CompanyUser" Type="SmartMeterModel.CompanyUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="CompanyUser">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CompanyUs__Updat__0C85DE4D">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="CompanyUser" Type="SmartMeterModel.CompanyUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="CompanyUser">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CompanyUs__UserI__0A9D95DB">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="CompanyUser" Type="SmartMeterModel.CompanyUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="CompanyUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__CreatedB__5441852A">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__UpdatedB__5535A963">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__UserId__534D60F1">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LimitType__Creat__5DCAEF64">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="LimitType" Type="SmartMeterModel.LimitType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="LimitType">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LimitType__Updat__5EBF139D">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="LimitType" Type="SmartMeterModel.LimitType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="LimitType">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MeterProp__Creat__2180FB33">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="MeterProperty" Type="SmartMeterModel.MeterProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="MeterProperty">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MeterProp__Updat__22751F6C">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="MeterProperty" Type="SmartMeterModel.MeterProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="MeterProperty">
+              <PropertyRef Name="UpdatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserLog__UserId__2EDAF651">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="UserLog" Type="SmartMeterModel.UserLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserLog">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserPermi__AppUs__3493CFA7">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="UserPermission" Type="SmartMeterModel.UserPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserPermission">
+              <PropertyRef Name="AppUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserProfi__UserI__3B40CD36">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="UserProfile" Type="SmartMeterModel.UserProfile" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserRole__AppUse__40F9A68C">
+          <End Role="AppUser" Type="SmartMeterModel.AppUser" Multiplicity="1" />
+          <End Role="UserRole" Type="SmartMeterModel.UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="AppUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__BillingPer__73BA3083">
+          <End Role="BillingPeriod" Type="SmartMeterModel.BillingPeriod" Multiplicity="0..1" />
+          <End Role="Bill" Type="SmartMeterModel.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BillingPeriod">
+              <PropertyRef Name="BillingPeriodId" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="BillingPeriodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bill__DeviceId__70DDC3D8">
+          <End Role="Device" Type="SmartMeterModel.Device" Multiplicity="1" />
+          <End Role="Bill" Type="SmartMeterModel.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="DeviceId" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="DeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingPe__Compa__3B75D760">
+          <End Role="Company" Type="SmartMeterModel.Company" Multiplicity="0..1" />
+          <End Role="BillingPeriod" Type="SmartMeterModel.BillingPeriod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="BillingPeriod">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Billi__7A672E12">
+          <End Role="BillingRateConfig" Type="SmartMeterModel.BillingRateConfig" Multiplicity="1" />
+          <End Role="BillingRate" Type="SmartMeterModel.BillingRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BillingRateConfig">
+              <PropertyRef Name="BillingRateConfigId" />
+            </Principal>
+            <Dependent Role="BillingRate">
+              <PropertyRef Name="BillingRateConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__Limit__7B5B524B">
+          <End Role="LimitType" Type="SmartMeterModel.LimitType" Multiplicity="0..1" />
+          <End Role="BillingRate" Type="SmartMeterModel.BillingRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LimitType">
+              <PropertyRef Name="LimitTypeId" />
+            </Principal>
+            <Dependent Role="BillingRate">
+              <PropertyRef Name="LimitTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__BillS__440B1D61">
+          <End Role="BillScheme" Type="SmartMeterModel.BillScheme" Multiplicity="1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BillScheme">
+              <PropertyRef Name="BillSchemeId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="BillSchemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__LoadS__47DBAE45">
+          <End Role="LoadScheme" Type="SmartMeterModel.LoadScheme" Multiplicity="0..1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoadScheme">
+              <PropertyRef Name="LoadSchemeId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="LoadSchemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillingRa__TimeS__46E78A0C">
+          <End Role="TimeScheme" Type="SmartMeterModel.TimeScheme" Multiplicity="0..1" />
+          <End Role="BillingRateConfig" Type="SmartMeterModel.BillingRateConfig" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeScheme">
+              <PropertyRef Name="TimeSchemeId" />
+            </Principal>
+            <Dependent Role="BillingRateConfig">
+              <PropertyRef Name="TimeSchemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillSchem__Compa__239E4DCF">
+          <End Role="Company" Type="SmartMeterModel.Company" Multiplicity="1" />
+          <End Role="BillScheme" Type="SmartMeterModel.BillScheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="BillScheme">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__BillSche__571DF1D5">
+          <End Role="BillScheme" Type="SmartMeterModel.BillScheme" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BillScheme">
+              <PropertyRef Name="BillSchemeId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="BillSchemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__City__CountryId__0AD2A005">
+          <End Role="Country" Type="SmartMeterModel.Country" Multiplicity="1" />
+          <End Role="City" Type="SmartMeterModel.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CommandVa__Comma__02FC7413">
+          <End Role="Command" Type="SmartMeterModel.Command" Multiplicity="1" />
+          <End Role="CommandValue" Type="SmartMeterModel.CommandValue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Command">
+              <PropertyRef Name="CommandId" />
+            </Principal>
+            <Dependent Role="CommandValue">
+              <PropertyRef Name="CommandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CommandVa__Devic__02084FDA">
+          <End Role="DeviceType" Type="SmartMeterModel.DeviceType" Multiplicity="1" />
+          <End Role="CommandValue" Type="SmartMeterModel.CommandValue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="DeviceTypeId" />
+            </Principal>
+            <Dependent Role="CommandValue">
+              <PropertyRef Name="DeviceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CompanyUs__Compa__09A971A2">
+          <End Role="Company" Type="SmartMeterModel.Company" Multiplicity="1" />
+          <End Role="CompanyUser" Type="SmartMeterModel.CompanyUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="CompanyUser">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LoadSchem__Compa__2E1BDC42">
+          <End Role="Company" Type="SmartMeterModel.Company" Multiplicity="0..1" />
+          <End Role="LoadScheme" Type="SmartMeterModel.LoadScheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="LoadScheme">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TimeSchem__Compa__34C8D9D1">
+          <End Role="Company" Type="SmartMeterModel.Company" Multiplicity="0..1" />
+          <End Role="TimeScheme" Type="SmartMeterModel.TimeScheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="TimeScheme">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__DeviceTy__52593CB8">
+          <End Role="DeviceType" Type="SmartMeterModel.DeviceType" Multiplicity="1" />
+          <End Role="Device" Type="SmartMeterModel.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="DeviceTypeId" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="DeviceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__ParentDe__5629CD9C">
+          <End Role="Device" Type="SmartMeterModel.Device" Multiplicity="0..1" />
+          <End Role="Device1" Type="SmartMeterModel.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="DeviceId" />
+            </Principal>
+            <Dependent Role="Device1">
+              <PropertyRef Name="ParentDeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DevicePro__Devic__1332DBDC">
+          <End Role="Device" Type="SmartMeterModel.Device" Multiplicity="1" />
+          <End Role="DeviceProperty" Type="SmartMeterModel.DeviceProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="DeviceId" />
+            </Principal>
+            <Dependent Role="DeviceProperty">
+              <PropertyRef Name="DeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MeterProp__Devic__208CD6FA">
+          <End Role="Device" Type="SmartMeterModel.Device" Multiplicity="1" />
+          <End Role="MeterProperty" Type="SmartMeterModel.MeterProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="DeviceId" />
+            </Principal>
+            <Dependent Role="MeterProperty">
+              <PropertyRef Name="DeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeviceTyp__Devic__19DFD96B">
+          <End Role="DeviceType" Type="SmartMeterModel.DeviceType" Multiplicity="1" />
+          <End Role="DeviceTypeProperty" Type="SmartMeterModel.DeviceTypeProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceType">
+              <PropertyRef Name="DeviceTypeId" />
+            </Principal>
+            <Dependent Role="DeviceTypeProperty">
+              <PropertyRef Name="DeviceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RolePermi__Permi__29221CFB">
+          <End Role="Permission" Type="SmartMeterModel.Permission" Multiplicity="1" />
+          <End Role="RolePermission" Type="SmartMeterModel.RolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="PermissionId" />
+            </Principal>
+            <Dependent Role="RolePermission">
+              <PropertyRef Name="PermissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserPermi__Permi__339FAB6E">
+          <End Role="Permission" Type="SmartMeterModel.Permission" Multiplicity="1" />
+          <End Role="UserPermission" Type="SmartMeterModel.UserPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="PermissionId" />
+            </Principal>
+            <Dependent Role="UserPermission">
+              <PropertyRef Name="PermissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RolePermi__RoleI__2A164134">
+          <End Role="Role" Type="SmartMeterModel.Role" Multiplicity="1" />
+          <End Role="RolePermission" Type="SmartMeterModel.RolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="RolePermission">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserRole__RoleId__41EDCAC5">
+          <End Role="Role" Type="SmartMeterModel.Role" Multiplicity="1" />
+          <End Role="UserRole" Type="SmartMeterModel.UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SmartMeterModelStoreContainer" CdmEntityContainer="SmartMeterEntities">
+          <EntitySetMapping Name="Addresses">
+            <EntityTypeMapping TypeName="SmartMeterModel.Address">
+              <MappingFragment StoreEntitySet="Address">
+                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CretaedBy" ColumnName="CretaedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppUsers">
+            <EntityTypeMapping TypeName="SmartMeterModel.AppUser">
+              <MappingFragment StoreEntitySet="AppUser">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IsLoggedIn" ColumnName="IsLoggedIn" />
+                <ScalarProperty Name="LastLogIn" ColumnName="LastLogIn" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bills">
+            <EntityTypeMapping TypeName="SmartMeterModel.Bill">
+              <MappingFragment StoreEntitySet="Bill">
+                <ScalarProperty Name="BillId" ColumnName="BillId" />
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="BillingPeriodId" ColumnName="BillingPeriodId" />
+                <ScalarProperty Name="TotalUnit" ColumnName="TotalUnit" />
+                <ScalarProperty Name="TotalUnitCost" ColumnName="TotalUnitCost" />
+                <ScalarProperty Name="TotalVAT" ColumnName="TotalVAT" />
+                <ScalarProperty Name="Surcharge" ColumnName="Surcharge" />
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BillingPeriods">
+            <EntityTypeMapping TypeName="SmartMeterModel.BillingPeriod">
+              <MappingFragment StoreEntitySet="BillingPeriod">
+                <ScalarProperty Name="BillingPeriodId" ColumnName="BillingPeriodId" />
+                <ScalarProperty Name="PeriodStartsFrom" ColumnName="PeriodStartsFrom" />
+                <ScalarProperty Name="PeriodEndsAt" ColumnName="PeriodEndsAt" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BillingRates">
+            <EntityTypeMapping TypeName="SmartMeterModel.BillingRate">
+              <MappingFragment StoreEntitySet="BillingRate">
+                <ScalarProperty Name="BillingRateId" ColumnName="BillingRateId" />
+                <ScalarProperty Name="BillingRateConfigId" ColumnName="BillingRateConfigId" />
+                <ScalarProperty Name="LimitTypeId" ColumnName="LimitTypeId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreteadBy" ColumnName="CreteadBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BillingRateConfigs">
+            <EntityTypeMapping TypeName="SmartMeterModel.BillingRateConfig">
+              <MappingFragment StoreEntitySet="BillingRateConfig">
+                <ScalarProperty Name="BillingRateConfigId" ColumnName="BillingRateConfigId" />
+                <ScalarProperty Name="BillSchemeId" ColumnName="BillSchemeId" />
+                <ScalarProperty Name="TimeSchemeId" ColumnName="TimeSchemeId" />
+                <ScalarProperty Name="LoadSchemeId" ColumnName="LoadSchemeId" />
+                <ScalarProperty Name="AppliedDateFrom" ColumnName="AppliedDateFrom" />
+                <ScalarProperty Name="AppliedDateTo" ColumnName="AppliedDateTo" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BillSchemes">
+            <EntityTypeMapping TypeName="SmartMeterModel.BillScheme">
+              <MappingFragment StoreEntitySet="BillScheme">
+                <ScalarProperty Name="BillSchemeId" ColumnName="BillSchemeId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="BillSchemeName" ColumnName="BillSchemeName" />
+                <ScalarProperty Name="BillSchemeDescription" ColumnName="BillSchemeDescription" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="SmartMeterModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Commands">
+            <EntityTypeMapping TypeName="SmartMeterModel.Command">
+              <MappingFragment StoreEntitySet="Command">
+                <ScalarProperty Name="CommandId" ColumnName="CommandId" />
+                <ScalarProperty Name="CommandName" ColumnName="CommandName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CommandValues">
+            <EntityTypeMapping TypeName="SmartMeterModel.CommandValue">
+              <MappingFragment StoreEntitySet="CommandValue">
+                <ScalarProperty Name="CommandValueId" ColumnName="CommandValueId" />
+                <ScalarProperty Name="DeviceTypeId" ColumnName="DeviceTypeId" />
+                <ScalarProperty Name="CommandId" ColumnName="CommandId" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="SmartMeterModel.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyUsers">
+            <EntityTypeMapping TypeName="SmartMeterModel.CompanyUser">
+              <MappingFragment StoreEntitySet="CompanyUser">
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="SmartMeterModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Devices">
+            <EntityTypeMapping TypeName="SmartMeterModel.Device">
+              <MappingFragment StoreEntitySet="Device">
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="DeviceTypeId" ColumnName="DeviceTypeId" />
+                <ScalarProperty Name="HardwareId" ColumnName="HardwareId" />
+                <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+                <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ParentDeviceId" ColumnName="ParentDeviceId" />
+                <ScalarProperty Name="NumberOfSubDevice" ColumnName="NumberOfSubDevice" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="BillSchemeId" ColumnName="BillSchemeId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceProperties">
+            <EntityTypeMapping TypeName="SmartMeterModel.DeviceProperty">
+              <MappingFragment StoreEntitySet="DeviceProperty">
+                <ScalarProperty Name="DevicePropertyId" ColumnName="DevicePropertyId" />
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="PropertyParameter" ColumnName="PropertyParameter" />
+                <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceTypes">
+            <EntityTypeMapping TypeName="SmartMeterModel.DeviceType">
+              <MappingFragment StoreEntitySet="DeviceType">
+                <ScalarProperty Name="DeviceTypeId" ColumnName="DeviceTypeId" />
+                <ScalarProperty Name="DeviceTypeName" ColumnName="DeviceTypeName" />
+                <ScalarProperty Name="DeviceTypeDecription" ColumnName="DeviceTypeDecription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceTypeProperties">
+            <EntityTypeMapping TypeName="SmartMeterModel.DeviceTypeProperty">
+              <MappingFragment StoreEntitySet="DeviceTypeProperty">
+                <ScalarProperty Name="DeviceTypePropertyId" ColumnName="DeviceTypePropertyId" />
+                <ScalarProperty Name="DeviceTypeId" ColumnName="DeviceTypeId" />
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="PropertyParameter" ColumnName="PropertyParameter" />
+                <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LimitTypes">
+            <EntityTypeMapping TypeName="SmartMeterModel.LimitType">
+              <MappingFragment StoreEntitySet="LimitType">
+                <ScalarProperty Name="LimitTypeId" ColumnName="LimitTypeId" />
+                <ScalarProperty Name="LimitName" ColumnName="LimitName" />
+                <ScalarProperty Name="LimitDescription" ColumnName="LimitDescription" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoadSchemes">
+            <EntityTypeMapping TypeName="SmartMeterModel.LoadScheme">
+              <MappingFragment StoreEntitySet="LoadScheme">
+                <ScalarProperty Name="LoadSchemeId" ColumnName="LoadSchemeId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="LoadSchemeName" ColumnName="LoadSchemeName" />
+                <ScalarProperty Name="LoadSchemeDescription" ColumnName="LoadSchemeDescription" />
+                <ScalarProperty Name="LoadFrom" ColumnName="LoadFrom" />
+                <ScalarProperty Name="LoadTo" ColumnName="LoadTo" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MeterProperties">
+            <EntityTypeMapping TypeName="SmartMeterModel.MeterProperty">
+              <MappingFragment StoreEntitySet="MeterProperty">
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="MeterPropertyId" ColumnName="MeterPropertyId" />
+                <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+                <ScalarProperty Name="RealPower" ColumnName="RealPower" />
+                <ScalarProperty Name="PowerFactor" ColumnName="PowerFactor" />
+                <ScalarProperty Name="KWHR" ColumnName="KWHR" />
+                <ScalarProperty Name="TransmissionTime" ColumnName="TransmissionTime" />
+                <ScalarProperty Name="LoggedAt" ColumnName="LoggedAt" />
+                <ScalarProperty Name="IsLatest" ColumnName="IsLatest" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permissions">
+            <EntityTypeMapping TypeName="SmartMeterModel.Permission">
+              <MappingFragment StoreEntitySet="Permission">
+                <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="SmartMeterModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolePermissions">
+            <EntityTypeMapping TypeName="SmartMeterModel.RolePermission">
+              <MappingFragment StoreEntitySet="RolePermission">
+                <ScalarProperty Name="RolePermissionId" ColumnName="RolePermissionId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TimeSchemes">
+            <EntityTypeMapping TypeName="SmartMeterModel.TimeScheme">
+              <MappingFragment StoreEntitySet="TimeScheme">
+                <ScalarProperty Name="TimeSchemeId" ColumnName="TimeSchemeId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="TimeSchemeName" ColumnName="TimeSchemeName" />
+                <ScalarProperty Name="TimeSchemeDescription" ColumnName="TimeSchemeDescription" />
+                <ScalarProperty Name="StartsAt" ColumnName="StartsAt" />
+                <ScalarProperty Name="EndsAt" ColumnName="EndsAt" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserLogs">
+            <EntityTypeMapping TypeName="SmartMeterModel.UserLog">
+              <MappingFragment StoreEntitySet="UserLog">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="LogInTime" ColumnName="LogInTime" />
+                <ScalarProperty Name="LogOutTime" ColumnName="LogOutTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserPermissions">
+            <EntityTypeMapping TypeName="SmartMeterModel.UserPermission">
+              <MappingFragment StoreEntitySet="UserPermission">
+                <ScalarProperty Name="UserPermissionId" ColumnName="UserPermissionId" />
+                <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+                <ScalarProperty Name="AppUserId" ColumnName="AppUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserProfiles">
+            <EntityTypeMapping TypeName="SmartMeterModel.UserProfile">
+              <MappingFragment StoreEntitySet="UserProfile">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="SocialSecurityNumber" ColumnName="SocialSecurityNumber" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="SmartMeterModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+                <ScalarProperty Name="AppUserId" ColumnName="AppUserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

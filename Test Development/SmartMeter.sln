@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMeter.Application", "SmartMeter.Application\SmartMeter.Application.csproj", "{2EE98D53-3D81-46A8-98BB-1CD65DFF4FF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{47BBC8AF-6130-48D1-9B9F-97D1E7A6834E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EE98D53-3D81-46A8-98BB-1CD65DFF4FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE98D53-3D81-46A8-98BB-1CD65DFF4FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE98D53-3D81-46A8-98BB-1CD65DFF4FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE98D53-3D81-46A8-98BB-1CD65DFF4FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47BBC8AF-6130-48D1-9B9F-97D1E7A6834E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47BBC8AF-6130-48D1-9B9F-97D1E7A6834E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47BBC8AF-6130-48D1-9B9F-97D1E7A6834E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47BBC8AF-6130-48D1-9B9F-97D1E7A6834E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
