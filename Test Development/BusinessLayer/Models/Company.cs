@@ -22,8 +22,8 @@ namespace BusinessLayer.Models
         public string Email { get; set; }
         public string Website { get; set; }
         public int AddressId { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 

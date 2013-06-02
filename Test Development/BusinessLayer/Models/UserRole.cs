@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Models
 {
-    public partial class UserRole
+    public class UserRole
     {
         public int UserRoleId { get; set; }
         public int AppUserId { get; set; }

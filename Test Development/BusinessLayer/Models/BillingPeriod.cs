@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Models
 {
-    public partial class BillingPeriod
+    public class BillingPeriod
     {
         //public BillingPeriod()
         //{
@@ -14,11 +14,11 @@ namespace BusinessLayer.Models
         //}
 
         public int BillingPeriodId { get; set; }
-        public System.DateTime PeriodStartsFrom { get; set; }
+        public DateTime PeriodStartsFrom { get; set; }
         public string PeriodEndsAt { get; set; }
-        public Nullable<int> CompanyId { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public int? CompanyId { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 

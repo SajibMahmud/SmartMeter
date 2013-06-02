@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Models
 {
-    public partial class BillingRateConfig
+    public class BillingRateConfig
     {
         //public BillingRateConfig()
         //{
@@ -15,14 +15,14 @@ namespace BusinessLayer.Models
 
         public int BillingRateConfigId { get; set; }
         public int BillSchemeId { get; set; }
-        public Nullable<int> TimeSchemeId { get; set; }
-        public Nullable<int> LoadSchemeId { get; set; }
-        public System.DateTime AppliedDateFrom { get; set; }
-        public System.DateTime AppliedDateTo { get; set; }
-        public double VAT { get; set; }
+        public int? TimeSchemeId { get; set; }
+        public int? LoadSchemeId { get; set; }
+        public DateTime AppliedDateFrom { get; set; }
+        public DateTime AppliedDateTo { get; set; }
+        public double Vat { get; set; }
         public string Currency { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 

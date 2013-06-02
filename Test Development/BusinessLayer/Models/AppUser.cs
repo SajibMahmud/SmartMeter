@@ -44,9 +44,9 @@ namespace BusinessLayer.Models
         public string PasswordSalt { get; set; }
         public bool Status { get; set; }
         public bool IsLoggedIn { get; set; }
-        public Nullable<System.DateTime> LastLogIn { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime? LastLogIn { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         public virtual ICollection<Address> Addresses { get; set; }
         public virtual ICollection<Address> Addresses1 { get; set; }

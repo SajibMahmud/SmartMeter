@@ -13,8 +13,8 @@ namespace BusinessLayer.Models
         public string PropertyName { get; set; }
         public string PropertyParameter { get; set; }
         public string PropertyValue { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         public virtual Device Device { get; set; }
     }

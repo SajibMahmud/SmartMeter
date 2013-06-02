@@ -9,8 +9,8 @@ namespace BusinessLayer.Models
     public class UserLog
     {
         public int UserId { get; set; }
-        public System.DateTime LogInTime { get; set; }
-        public Nullable<System.DateTime> LogOutTime { get; set; }
+        public DateTime LogInTime { get; set; }
+        public DateTime LogOutTime { get; set; }
 
         public virtual AppUser AppUser { get; set; }
     }

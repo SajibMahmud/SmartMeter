@@ -18,8 +18,8 @@ namespace BusinessLayer.Models
         public int CompanyId { get; set; }
         public string BillSchemeName { get; set; }
         public string BillSchemeDescription { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         public virtual ICollection<BillingRateConfig> BillingRateConfigs { get; set; }
         public virtual Company Company { get; set; }

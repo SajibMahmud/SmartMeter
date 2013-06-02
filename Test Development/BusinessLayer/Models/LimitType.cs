@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Models
 {
-    public  class LimitType
+    public class LimitType
     {
         //public LimitType()
         //{
@@ -16,8 +16,8 @@ namespace BusinessLayer.Models
         public int LimitTypeId { get; set; }
         public string LimitName { get; set; }
         public string LimitDescription { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 

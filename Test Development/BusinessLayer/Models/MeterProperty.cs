@@ -14,11 +14,11 @@ namespace BusinessLayer.Models
         public double RealPower { get; set; }
         public double PowerFactor { get; set; }
         public double KWHR { get; set; }
-        public System.DateTime TransmissionTime { get; set; }
-        public Nullable<System.DateTime> LoggedAt { get; set; }
+        public DateTime TransmissionTime { get; set; }
+        public DateTime? LoggedAt { get; set; }
         public bool IsLatest { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Models
 {
-    public  class DeviceType
+    public class DeviceType
     {
-        public DeviceType()
-        {
-            this.CommandValues = new HashSet<CommandValue>();
-            this.Devices = new HashSet<Device>();
-            this.DeviceTypeProperties = new HashSet<DeviceTypeProperty>();
-        }
+        //public DeviceType()
+        //{
+        //    this.CommandValues = new HashSet<CommandValue>();
+        //    this.Devices = new HashSet<Device>();
+        //    this.DeviceTypeProperties = new HashSet<DeviceTypeProperty>();
+        //}
 
         public int DeviceTypeId { get; set; }
         public string DeviceTypeName { get; set; }

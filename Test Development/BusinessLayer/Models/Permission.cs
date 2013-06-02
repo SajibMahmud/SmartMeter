@@ -17,8 +17,8 @@ namespace BusinessLayer.Models
         public int PermissionId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         public virtual ICollection<RolePermission> RolePermissions { get; set; }
         public virtual ICollection<UserPermission> UserPermissions { get; set; }

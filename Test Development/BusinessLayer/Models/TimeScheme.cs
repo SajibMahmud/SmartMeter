@@ -14,13 +14,13 @@ namespace BusinessLayer.Models
         //}
 
         public int TimeSchemeId { get; set; }
-        public Nullable<int> CompanyId { get; set; }
+        public int? CompanyId { get; set; }
         public string TimeSchemeName { get; set; }
         public string TimeSchemeDescription { get; set; }
-        public System.DateTime StartsAt { get; set; }
-        public System.DateTime EndsAt { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime StartsAt { get; set; }
+        public DateTime EndsAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         public virtual ICollection<BillingRateConfig> BillingRateConfigs { get; set; }
         public virtual Company Company { get; set; }

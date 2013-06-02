@@ -19,16 +19,16 @@ namespace BusinessLayer.Models
         public int DeviceId { get; set; }
         public int DeviceTypeId { get; set; }
         public string HardwareId { get; set; }
-        public Nullable<System.DateTime> ProductionDate { get; set; }
-        public Nullable<System.DateTime> ExpireDate { get; set; }
+        public DateTime? ProductionDate { get; set; }
+        public DateTime? ExpireDate { get; set; }
         public string Comment { get; set; }
         public int UserId { get; set; }
-        public Nullable<int> ParentDeviceId { get; set; }
-        public Nullable<int> NumberOfSubDevice { get; set; }
+        public int? ParentDeviceId { get; set; }
+        public int? NumberOfSubDevice { get; set; }
         public bool Status { get; set; }
         public int BillSchemeId { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 

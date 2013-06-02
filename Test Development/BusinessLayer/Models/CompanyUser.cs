@@ -10,8 +10,8 @@ namespace BusinessLayer.Models
     {
         public int CompanyId { get; set; }
         public int UserId { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 

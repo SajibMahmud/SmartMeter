@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Models
 {
-    public partial class BillingRate
+    public class BillingRate
     {
         public int BillingRateId { get; set; }
         public int BillingRateConfigId { get; set; }
-        public Nullable<int> LimitTypeId { get; set; }
-        public System.DateTime CreatedAt { get; set; }
-        public System.DateTime UpdatedAt { get; set; }
+        public int? LimitTypeId { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int CreteadBy { get; set; }
-        public Nullable<int> UpdatedBy { get; set; }
+        public int? UpdatedBy { get; set; }
 
         public virtual AppUser AppUser { get; set; }
         public virtual AppUser AppUser1 { get; set; }
