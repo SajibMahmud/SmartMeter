@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,6 @@ namespace BusinessLayer.Models
 {
     public class DeviceType
     {
-        //public DeviceType()
-        //{
-        //    this.CommandValues = new HashSet<CommandValue>();
-        //    this.Devices = new HashSet<Device>();
-        //    this.DeviceTypeProperties = new HashSet<DeviceTypeProperty>();
-        //}
-
         public int DeviceTypeId { get; set; }
         public string DeviceTypeName { get; set; }
         public string DeviceTypeDecription { get; set; }

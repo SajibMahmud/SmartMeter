@@ -15,9 +15,9 @@ namespace BusinessLayer.Models
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 
-        public virtual AppUser AppUser { get; set; }
-        public virtual AppUser AppUser1 { get; set; }
-        public virtual AppUser AppUser2 { get; set; }
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
+        public virtual User User2 { get; set; }
         public virtual Company Company { get; set; }
     }
 }

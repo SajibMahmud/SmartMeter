@@ -46,6 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\AppUser.cs" />
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\BillingPeriod.cs" />
+    <Compile Include="Models\BillingRate.cs" />
+    <Compile Include="Models\BillingRateConfig.cs" />
+    <Compile Include="Models\BillScheme.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Command.cs" />
+    <Compile Include="Models\CommandValue.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\CompanyUser.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Device.cs" />
+    <Compile Include="Models\DeviceProperty.cs" />
+    <Compile Include="Models\DeviceType.cs" />
+    <Compile Include="Models\DeviceTypeProperty.cs" />
+    <Compile Include="Models\LimitType.cs" />
+    <Compile Include="Models\LoadScheme.cs" />
+    <Compile Include="Models\MeterProperty.cs" />
+    <Compile Include="Models\Permission.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RolePermission.cs" />
+    <Compile Include="Models\TimeScheme.cs" />
+    <Compile Include="Models\UserLog.cs" />
+    <Compile Include="Models\UserPermission.cs" />
+    <Compile Include="Models\UserProfile.cs" />
+    <Compile Include="Models\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,9 +83,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,6 @@ namespace BusinessLayer.Models
         //{
         //    this.Bills = new HashSet<Bill>();
         //}
-
         public int BillingPeriodId { get; set; }
         public DateTime PeriodStartsFrom { get; set; }
         public string PeriodEndsAt { get; set; }
@@ -22,8 +22,8 @@ namespace BusinessLayer.Models
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 
-        public virtual AppUser AppUser { get; set; }
-        public virtual AppUser AppUser1 { get; set; }
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
         public virtual ICollection<Bill> Bills { get; set; }
         public virtual Company Company { get; set; }
     }

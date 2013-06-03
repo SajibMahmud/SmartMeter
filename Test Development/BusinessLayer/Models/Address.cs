@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,12 +9,6 @@ namespace BusinessLayer.Models
 {
     public class Address
     {
-        //public Address()
-        //{
-        //    this.Companies = new HashSet<Company>();
-        //    this.UserProfiles = new HashSet<UserProfile>();
-        //}
-
         public int AddressId { get; set; }
         public string Address1 { get; set; }
         public string Address2 { get; set; }
@@ -30,8 +25,8 @@ namespace BusinessLayer.Models
 
         public virtual City City { get; set; }
         public virtual Country Country { get; set; }
-        public virtual AppUser AppUser { get; set; }
-        public virtual AppUser AppUser1 { get; set; }
+        public virtual AppUser User { get; set; }
+        public virtual AppUser User1 { get; set; }
         public virtual ICollection<Company> Companies { get; set; }
         public virtual ICollection<UserProfile> UserProfiles { get; set; }
     }

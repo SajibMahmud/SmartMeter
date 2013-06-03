@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,12 +9,6 @@ namespace BusinessLayer.Models
 {
     public class BillScheme
     {
-        //public BillScheme()
-        //{
-        //    this.BillingRateConfigs = new HashSet<BillingRateConfig>();
-        //    this.Devices = new HashSet<Device>();
-        //}
-
         public int BillSchemeId { get; set; }
         public int CompanyId { get; set; }
         public string BillSchemeName { get; set; }

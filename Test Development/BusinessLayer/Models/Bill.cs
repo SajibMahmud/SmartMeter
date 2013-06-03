@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,8 @@ namespace BusinessLayer.Models
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 
-        public virtual AppUser AppUser { get; set; }
-        public virtual AppUser AppUser1 { get; set; }
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
         public virtual BillingPeriod BillingPeriod { get; set; }
         public virtual Device Device { get; set; }
     }

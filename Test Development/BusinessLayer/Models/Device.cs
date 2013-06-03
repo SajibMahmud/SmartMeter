@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +9,6 @@ namespace BusinessLayer.Models
 {
     public partial class Device
     {
-        //public Device()
-        //{
-        //    this.Bills = new HashSet<Bill>();
-        //    this.Device1 = new HashSet<Device>();
-        //    this.DeviceProperties = new HashSet<DeviceProperty>();
-        //    this.MeterProperties = new HashSet<MeterProperty>();
-        //}
-
         public int DeviceId { get; set; }
         public int DeviceTypeId { get; set; }
         public string HardwareId { get; set; }
@@ -32,9 +25,9 @@ namespace BusinessLayer.Models
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 
-        public virtual AppUser AppUser { get; set; }
-        public virtual AppUser AppUser1 { get; set; }
-        public virtual AppUser AppUser2 { get; set; }
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
+        public virtual User User2 { get; set; }
         public virtual ICollection<Bill> Bills { get; set; }
         public virtual BillScheme BillScheme { get; set; }
         public virtual DeviceType DeviceType { get; set; }

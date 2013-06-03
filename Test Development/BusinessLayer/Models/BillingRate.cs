@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,8 @@ namespace BusinessLayer.Models
         public int CreteadBy { get; set; }
         public int? UpdatedBy { get; set; }
 
-        public virtual AppUser AppUser { get; set; }
-        public virtual AppUser AppUser1 { get; set; }
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
         public virtual BillingRateConfig BillingRateConfig { get; set; }
         public virtual LimitType LimitType { get; set; }
     }

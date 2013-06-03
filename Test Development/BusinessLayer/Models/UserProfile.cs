@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace BusinessLayer.Models
 {
     public class UserProfile
     {
+        [Key]
         public int UserId { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
@@ -20,6 +22,6 @@ namespace BusinessLayer.Models
         public DateTime UpdatedAt { get; set; }
 
         public virtual Address Address { get; set; }
-        public virtual AppUser AppUser { get; set; }
+        public virtual User User { get; set; }
     }
 }
