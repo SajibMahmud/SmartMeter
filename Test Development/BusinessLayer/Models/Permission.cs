@@ -9,12 +9,6 @@ namespace BusinessLayer.Models
 {
     public class Permission
     {
-        //public Permission()
-        //{
-        //    this.RolePermissions = new HashSet<RolePermission>();
-        //    this.UserPermissions = new HashSet<UserPermission>();
-        //}
-        [Key]
         public int PermissionId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

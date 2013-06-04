@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,10 +24,13 @@ namespace BusinessLayer.Models
         public int CretaedBy { get; set; }
         public int UpdatedBy { get; set; }
 
+        [ForeignKey("CretaedBy")]
+        public virtual AppUser Creator { get; set; }
+        [ForeignKey("UpdatedBy")]
+        public virtual AppUser Updator { get; set; }
+
         public virtual City City { get; set; }
         public virtual Country Country { get; set; }
-        public virtual AppUser User { get; set; }
-        public virtual AppUser User1 { get; set; }
         public virtual ICollection<Company> Companies { get; set; }
         public virtual ICollection<UserProfile> UserProfiles { get; set; }
     }

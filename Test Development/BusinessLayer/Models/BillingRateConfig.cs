@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,10 @@ namespace BusinessLayer.Models
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 
-        public virtual User User { get; set; }
-        public virtual User User1 { get; set; }
+        [ForeignKey("CretaedBy")]
+        public virtual AppUser Creator { get; set; }
+        [ForeignKey("UpdatedBy")]
+        public virtual AppUser Updator { get; set; }
         public virtual ICollection<BillingRate> BillingRates { get; set; }
         public virtual BillScheme BillScheme { get; set; }
         public virtual LoadScheme LoadScheme { get; set; }

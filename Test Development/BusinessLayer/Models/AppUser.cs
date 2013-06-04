@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace BusinessLayer.Models
 {
     public class AppUser
     {
+        [Key]
         public int UserId { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
@@ -20,31 +22,67 @@ namespace BusinessLayer.Models
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
-        public virtual ICollection<Address> Addresses { get; set; }
-        public virtual ICollection<Address> Addresses1 { get; set; }
-        public virtual ICollection<Bill> Bills { get; set; }
-        public virtual ICollection<Bill> Bills1 { get; set; }
-        public virtual ICollection<BillingPeriod> BillingPeriods { get; set; }
-        public virtual ICollection<BillingPeriod> BillingPeriods1 { get; set; }
-        public virtual ICollection<BillingRateConfig> BillingRateConfigs { get; set; }
-        public virtual ICollection<BillingRate> BillingRates { get; set; }
-        public virtual ICollection<BillingRateConfig> BillingRateConfigs1 { get; set; }
-        public virtual ICollection<BillingRate> BillingRates1 { get; set; }
-        public virtual ICollection<Company> Companies { get; set; }
-        public virtual ICollection<Company> Companies1 { get; set; }
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<Address> CreatedAddresses { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<Address> UpdatedAddresses { get; set; }
+
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<Bill> CreatedBills { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<Bill> UpdatedBills { get; set; }
+
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<BillingPeriod> CreatedBillingPeriods { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<BillingPeriod> UpdatedBillingPeriods { get; set; }
+        
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<BillingRateConfig> CreatedBillingRateConfigs { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<BillingRateConfig> UpdatedBillingRateConfigs { get; set; }
+
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<BillingRate> CreatedBillingRates { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<BillingRate> UpdatedBillingRates { get; set; }
+        
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<Company> CreatedCompanies { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<Company> UpdatedCompanies { get; set; }
+
+        [InverseProperty("UserId")]
         public virtual ICollection<CompanyUser> CompanyUsers { get; set; }
-        public virtual ICollection<CompanyUser> CompanyUsers1 { get; set; }
-        public virtual ICollection<CompanyUser> CompanyUsers2 { get; set; }
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<CompanyUser> CreatedCompanyUsers { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<CompanyUser> UpdatedCompanyUsers { get; set; }
+
+        [InverseProperty("UserId")]
         public virtual ICollection<Device> Devices { get; set; }
-        public virtual ICollection<Device> Devices1 { get; set; }
-        public virtual ICollection<Device> Devices2 { get; set; }
-        public virtual ICollection<LimitType> LimitTypes { get; set; }
-        public virtual ICollection<LimitType> LimitTypes1 { get; set; }
-        public virtual ICollection<MeterProperty> MeterProperties { get; set; }
-        public virtual ICollection<MeterProperty> MeterProperties1 { get; set; }
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<Device> CreatedDevices { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<Device> UpdatedDevices { get; set; }
+
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<LimitType> CreatedLimitTypes { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<LimitType> UpdatedLimitTypes { get; set; }
+
+        [InverseProperty("CreatedBy")]
+        public virtual ICollection<MeterProperty> CreatedMeterProperties { get; set; }
+        [InverseProperty("UpdatedBy")]
+        public virtual ICollection<MeterProperty> UpdatedMeterProperties { get; set; }
+
+        [InverseProperty("UserId")]
         public virtual ICollection<UserLog> UserLogs { get; set; }
+        [InverseProperty("UserId")]
         public virtual ICollection<UserPermission> UserPermissions { get; set; }
+        [InverseProperty("UserId")]
         public virtual UserProfile UserProfile { get; set; }
+        [InverseProperty("UserId")]
         public virtual ICollection<UserRole> UserRoles { get; set; }
     }
 }
