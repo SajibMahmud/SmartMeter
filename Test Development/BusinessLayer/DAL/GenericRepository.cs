@@ -54,7 +54,7 @@ namespace BusinessLayer.DAL
         }
         public virtual IEnumerable<TEntity> GetAll()
         {
-            return this.dbSet;
+            return dbSet;
         }
         public virtual TEntity GetByID(object id)
         {
