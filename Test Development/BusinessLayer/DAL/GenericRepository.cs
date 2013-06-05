@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.DAL
 {
-    public class GenericRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         internal BusinessContext context;
         internal DbSet<TEntity> dbSet;
@@ -47,7 +47,15 @@ namespace BusinessLayer.DAL
                 return query.ToList();
             }
         }
-
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        {
+            IQueryable<TEntity> query = dbSet;
+            return query.Where(predicate);
+        }
+        public virtual IEnumerable<TEntity> GetAll()
+        {
+            return this.dbSet;
+        }
         public virtual TEntity GetByID(object id)
         {
             return dbSet.Find(id);
