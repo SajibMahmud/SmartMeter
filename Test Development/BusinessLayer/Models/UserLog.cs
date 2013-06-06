@@ -10,12 +10,12 @@ namespace BusinessLayer.Models
 {
     public class UserLog
     {
-        [Key]
+        [Key, Column(Order=0)]
         public int UserId { get; set; }
+        [Key, Column(Order = 1)]
         public DateTime LogInTime { get; set; }
         public DateTime LogOutTime { get; set; }
 
-        [ForeignKey("UserId")]
         public virtual AppUser User { get; set; }
     }
 }

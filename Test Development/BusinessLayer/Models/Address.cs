@@ -21,14 +21,12 @@ namespace BusinessLayer.Models
         public int CountryId { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public int CretaedBy { get; set; }
+        public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 
-        [ForeignKey("CretaedBy")]
-        public virtual AppUser Creator { get; set; }
-        [ForeignKey("UpdatedBy")]
-        public virtual AppUser Updator { get; set; }
 
+        public virtual AppUser Creator { get; set; }
+        public virtual AppUser Updator { get; set; }
         public virtual City City { get; set; }
         public virtual Country Country { get; set; }
         public virtual ICollection<Company> Companies { get; set; }

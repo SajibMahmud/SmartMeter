@@ -21,9 +21,7 @@ namespace BusinessLayer.Models
         public int UpdatedBy { get; set; }
 
         public virtual Address Address { get; set; }
-        [ForeignKey("CretaedBy")]
         public virtual AppUser Creator { get; set; }
-        [ForeignKey("UpdatedBy")]
         public virtual AppUser Updator { get; set; }
         public virtual ICollection<BillingPeriod> BillingPeriods { get; set; }
         public virtual ICollection<BillScheme> BillSchemes { get; set; }

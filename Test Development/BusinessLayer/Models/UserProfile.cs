@@ -23,7 +23,6 @@ namespace BusinessLayer.Models
         public DateTime UpdatedAt { get; set; }
 
         public virtual Address Address { get; set; }
-        [ForeignKey("UserId")]
         public virtual AppUser User { get; set; }
     }
 }

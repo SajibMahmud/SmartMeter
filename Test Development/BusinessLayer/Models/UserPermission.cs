@@ -14,7 +14,6 @@ namespace BusinessLayer.Models
         public int PermissionId { get; set; }
         public int UserId { get; set; }
 
-        [ForeignKey("UserId")]
         public virtual AppUser User { get; set; }
         public virtual Permission Permission { get; set; }
     }

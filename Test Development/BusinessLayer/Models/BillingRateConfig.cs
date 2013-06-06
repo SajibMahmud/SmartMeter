@@ -23,9 +23,7 @@ namespace BusinessLayer.Models
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
 
-        [ForeignKey("CretaedBy")]
         public virtual AppUser Creator { get; set; }
-        [ForeignKey("UpdatedBy")]
         public virtual AppUser Updator { get; set; }
         public virtual ICollection<BillingRate> BillingRates { get; set; }
         public virtual BillScheme BillScheme { get; set; }
