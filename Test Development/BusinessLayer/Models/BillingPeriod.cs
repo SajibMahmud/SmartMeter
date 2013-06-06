@@ -10,6 +10,10 @@ namespace BusinessLayer.Models
 {
     public class BillingPeriod
     {
+        public BillingPeriod()
+        {
+            this.Bills = new HashSet<Bill>();
+        }
         public int BillingPeriodId { get; set; }
         public DateTime PeriodStartsFrom { get; set; }
         public string PeriodEndsAt { get; set; }

@@ -10,6 +10,10 @@ namespace BusinessLayer.Models
 {
     public class BillingRateConfig
     {
+        public BillingRateConfig()
+        {
+            this.BillingRates = new HashSet<BillingRate>();
+        }
         public int BillingRateConfigId { get; set; }
         public int BillSchemeId { get; set; }
         public int? TimeSchemeId { get; set; }

@@ -10,6 +10,11 @@ namespace BusinessLayer.Models
 {
     public class Address
     {
+        public Address()
+        {
+            this.Companies = new HashSet<Company>();
+            this.UserProfiles = new HashSet<UserProfile>();
+        }
         public int AddressId { get; set; }
         public string Address1 { get; set; }
         public string Address2 { get; set; }

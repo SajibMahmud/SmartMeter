@@ -10,6 +10,14 @@ namespace BusinessLayer.Models
 {
     public class Company
     {
+        public Company()
+        {
+            this.BillingPeriods = new HashSet<BillingPeriod>();
+            this.BillSchemes = new HashSet<BillScheme>();
+            this.CompanyUsers = new HashSet<CompanyUser>();
+            this.LoadSchemes = new HashSet<LoadScheme>();
+            this.TimeSchemes = new HashSet<TimeScheme>();
+        }
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
         public string Email { get; set; }

@@ -10,6 +10,10 @@ namespace BusinessLayer.Models
 {
     public class LimitType
     {
+        public LimitType()
+        {
+            this.BillingRates = new HashSet<BillingRate>();
+        }
         public int LimitTypeId { get; set; }
         public string LimitName { get; set; }
         public string LimitDescription { get; set; }

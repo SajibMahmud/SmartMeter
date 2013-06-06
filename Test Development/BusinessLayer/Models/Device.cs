@@ -10,6 +10,13 @@ namespace BusinessLayer.Models
 {
     public partial class Device
     {
+        public Device()
+        {
+            this.Bills = new HashSet<Bill>();
+            this.Device1 = new HashSet<Device>();
+            this.DeviceProperties = new HashSet<DeviceProperty>();
+            this.MeterProperties = new HashSet<MeterProperty>();
+        }
         public int DeviceId { get; set; }
         public int DeviceTypeId { get; set; }
         public string HardwareId { get; set; }

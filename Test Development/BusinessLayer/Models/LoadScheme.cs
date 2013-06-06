@@ -9,6 +9,10 @@ namespace BusinessLayer.Models
 {
     public class LoadScheme
     {
+        public LoadScheme()
+        {
+            this.BillingRateConfigs = new HashSet<BillingRateConfig>();
+        }
         public int LoadSchemeId { get; set; }
         public int? CompanyId { get; set; }
         public string LoadSchemeName { get; set; }

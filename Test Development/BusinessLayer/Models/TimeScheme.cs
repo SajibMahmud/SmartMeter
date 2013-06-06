@@ -9,6 +9,10 @@ namespace BusinessLayer.Models
 {
     public class TimeScheme
     {
+        public TimeScheme()
+        {
+            this.BillingRateConfigs = new HashSet<BillingRateConfig>();
+        }
         public int TimeSchemeId { get; set; }
         public int? CompanyId { get; set; }
         public string TimeSchemeName { get; set; }

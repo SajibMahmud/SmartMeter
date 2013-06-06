@@ -10,6 +10,34 @@ namespace BusinessLayer.Models
 {
     public class AppUser
     {
+        public AppUser()
+        {
+            this.CreatedAddresses = new HashSet<Address>();
+            this.UpdatedAddresses = new HashSet<Address>();
+            this.CreatedBills = new HashSet<Bill>();
+            this.UpdatedBills = new HashSet<Bill>();
+            this.CreatedBillingPeriods = new HashSet<BillingPeriod>();
+            this.UpdatedBillingPeriods = new HashSet<BillingPeriod>();
+            this.CreatedBillingRateConfigs = new HashSet<BillingRateConfig>();
+            this.UpdatedBillingRateConfigs = new HashSet<BillingRateConfig>();
+            this.CreatedBillingRates = new HashSet<BillingRate>();
+            this.UpdatedBillingRates = new HashSet<BillingRate>();
+            this.CreatedCompanies = new HashSet<Company>();
+            this.UpdatedCompanies = new HashSet<Company>();
+            this.CompanyUsers = new HashSet<CompanyUser>();
+            this.CreatedCompanyUsers = new HashSet<CompanyUser>();
+            this.UpdatedCompanyUsers = new HashSet<CompanyUser>();
+            this.Devices = new HashSet<Device>();
+            this.CreatedDevices = new HashSet<Device>();
+            this.UpdatedDevices = new HashSet<Device>();
+            this.CreatedLimitTypes = new HashSet<LimitType>();
+            this.UpdatedLimitTypes = new HashSet<LimitType>();
+            this.CreatedMeterProperties = new HashSet<MeterProperty>();
+            this.UpdatedMeterProperties = new HashSet<MeterProperty>();
+            this.UserLogs = new HashSet<UserLog>();
+            this.UserPermissions = new HashSet<UserPermission>();
+            this.UserRoles = new HashSet<UserRole>();
+        }
         [Key]
         public int UserId { get; set; }
         public string UserName { get; set; }
