@@ -12,14 +12,16 @@ namespace SmartMeter.Application.Controllers
 {
     public class CountryController : Controller
     {
-        private BusinessContext db = new BusinessContext();
-
+        private UnitOfWork unitOfWork = new UnitOfWork();
         //
         // GET: /Country/
 
         public ActionResult Index()
         {
-            return View(db.Countries.ToList());
+            var courses = unitOfWork.CountryRepository.Get();
+            return View(courses.ToList());
+
+            //return View(db.Countries.ToList());
         }
 
         //
@@ -27,7 +29,7 @@ namespace SmartMeter.Application.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Country country = db.Countries.Find(id);
+            Country country = unitOfWork.CountryRepository.GetByID(id);
             if (country == null)
             {
                 return HttpNotFound();
@@ -50,11 +52,19 @@ namespace SmartMeter.Application.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Country country)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Countries.Add(country);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    unitOfWork.CountryRepository.Insert(country);
+                    unitOfWork.Save();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (DataException)
+            {
+                //Log the error (add a variable name after DataException)
+                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
             }
 
             return View(country);
@@ -65,7 +75,7 @@ namespace SmartMeter.Application.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Country country = db.Countries.Find(id);
+            Country country = unitOfWork.CountryRepository.GetByID(id);
             if (country == null)
             {
                 return HttpNotFound();
@@ -80,11 +90,19 @@ namespace SmartMeter.Application.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Country country)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(country).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    unitOfWork.CountryRepository.Update(country);
+                    unitOfWork.Save();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (DataException)
+            {
+                //Log the error (add a variable name after DataException)
+                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
             }
             return View(country);
         }
@@ -94,7 +112,7 @@ namespace SmartMeter.Application.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Country country = db.Countries.Find(id);
+            Country country = unitOfWork.CountryRepository.GetByID(id);
             if (country == null)
             {
                 return HttpNotFound();
@@ -109,15 +127,15 @@ namespace SmartMeter.Application.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Country country = db.Countries.Find(id);
-            db.Countries.Remove(country);
-            db.SaveChanges();
+            Country country = unitOfWork.CountryRepository.GetByID(id);
+            unitOfWork.CountryRepository.Delete(id);
+            unitOfWork.Save();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            unitOfWork.Dispose();
             base.Dispose(disposing);
         }
     }
